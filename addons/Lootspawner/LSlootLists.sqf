@@ -14,12 +14,11 @@ lootWeapon_list =
 	[ // CIVIL
 		0,
 		[
-			"arifle_MK20C_F",
-			"arifle_MK20_F",
-			"arifle_TRG20_F",
-			"arifle_TRG21_F",
 			"Binocular",
+			"hgun_ACPC2_F",
 			"hgun_PDW2000_F",
+			"hgun_Pistol_01_F",
+			"hgun_Pistol_heavy_02_F",
 			"SMG_01_F",                         // Vermin .45 ACP
 			"SMG_02_F"                          // Sting 9mm
 		]
@@ -44,6 +43,11 @@ lootWeapon_list =
 			"arifle_TRG21_GL_F",
 			"Binocular",
 			"hgun_PDW2000_F",
+			"hgun_Pistol_heavy_01_F",
+			"I_UavTerminal",
+			"Laserdesignator",
+			"launch_Titan_F",
+			"launch_Titan_short_F",
 			"LMG_Mk200_F",
 			"LMG_Zafir_F",
 			"Rangefinder",
@@ -64,6 +68,7 @@ lootWeapon_list =
 			"arifle_Katiba_C_F",
 			"arifle_MXC_F",
 			"Binocular",
+			"Laserbatteries",
 			"SMG_01_F",                         // Vermin .45 ACP
 			"SMG_02_F"                          // Sting 9mm
 		]
@@ -75,6 +80,7 @@ lootWeapon_list =
 			"arifle_MXC_F",
 			"arifle_MXM_F",
 			"arifle_MX_GL_F",
+			"Laserbatteries",
 			"Rangefinder",
 			"srifle_GM6_F",
 			"srifle_LRR_F"
@@ -98,7 +104,9 @@ lootMagazine_list =
 			"30Rnd_45ACP_Mag_SMG_01_tracer_green",
 			"30Rnd_556x45_Stanag_Tracer_Yellow",
 			"30Rnd_65x39_caseless_mag_Tracer",
-			"30Rnd_65x39_caseless_green_mag_Tracer"/*,
+			"30Rnd_65x39_caseless_green_mag_Tracer",
+			"30Rnd_762x39_Mag_F",
+			"Titan_AT"/*,
 			"Chemlight_blue",
 			"Chemlight_green",
 			"Chemlight_red",
@@ -135,6 +143,7 @@ lootMagazine_list =
 			"30Rnd_65x39_caseless_green_mag_Tracer",
 			"30Rnd_65x39_caseless_mag",
 			"30Rnd_65x39_caseless_mag_Tracer",
+			"30Rnd_762x39_Mag_F",
 			"30Rnd_9x21_Mag",
 			"30Rnd_9x21_Mag",
 			/*"3Rnd_HE_Grenade_shell",
@@ -146,6 +155,7 @@ lootMagazine_list =
 			"3Rnd_SmokeYellow_Grenade_shell",
 			"3Rnd_Smoke_Grenade_shell",*/
 			"5Rnd_127x108_Mag",
+			"5Rnd_127x108_APDS_Mag",
 			"7Rnd_408_Mag",
 			"9Rnd_45ACP_Mag",
 			"9Rnd_45ACP_Mag",
@@ -174,7 +184,9 @@ lootMagazine_list =
 			"30Rnd_65x39_caseless_green",
 			"30Rnd_65x39_caseless_green_mag_Tracer",
 			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag_Tracer"/*,
+			"30Rnd_65x39_caseless_mag_Tracer",
+			"30Rnd_762x39_Mag_F",
+			"Titan_AA"/*,
 			"Chemlight_blue",
 			"Chemlight_green",
 			"Chemlight_red",
@@ -191,8 +203,11 @@ lootMagazine_list =
 			"30Rnd_65x39_caseless_mag",
 			"30Rnd_65x39_caseless_green",
 			"30Rnd_65x39_caseless_green",
+			"30Rnd_762x39_Mag_F",
 			"5Rnd_127x108_Mag",
-			"7Rnd_408_Mag"
+			"5Rnd_127x108_APDS_Mag",
+			"7Rnd_408_Mag",
+			"Titan_AP"
 		]
 	]
 ];
@@ -235,7 +250,7 @@ lootItem_list =
 			"muzzle_snds_L",                    // 9mm
 			"muzzle_snds_M",                    // 5.56mm
 			"NVGoggles",
-			//"NVGoggles_INDEP",
+			"NVGoggles_INDEP",
 			//"NVGoggles_OPFOR",
 			"optic_Aco",
 			"optic_ACO_grn",
@@ -244,11 +259,15 @@ lootItem_list =
 			"optic_Hamr",
 			"optic_Holosight",
 			"optic_Holosight_smg",
+			"optic_LRPS",
+			"optic_MRD",
 			"optic_SOS",
+			"optic_tws",
 			"ToolKit",
 			"H_HelmetB",
 			"H_HelmetIA",
 			"H_HelmetO_ocamo",
+			"H_HelmetO_ViperSP_hex_F",
 			"V_PlateCarrier1_rgr",
 			"V_PlateCarrierIA1_dgtl",
 			"V_HarnessO_brn"
@@ -273,11 +292,14 @@ lootItem_list =
 			"ItemGPS",
 			"Medikit",
 			"NVGoggles",
-			//"NVGoggles_INDEP",
+			"NVGoggles_INDEP",
 			//"NVGoggles_OPFOR",
+			"optic_MRD",
 			"optic_Nightstalker",
 			"optic_NVS",
 			"optic_SOS",
+			"U_B_FullGhillie_lsh",
+			"U_O_V_Soldier_Viper_hex_F",
 			"V_RebreatherB"
 		]
 	]
@@ -307,17 +329,14 @@ lootBackpack_list =
 			"B_FieldPack_khk",
 			"B_FieldPack_oucamo",
 			"B_Kitbag_cbr",
+			"B_Kitbag_cbr",
+			"B_Kitbag_cbr",
+			"B_Kitbag_cbr",
 			"B_Kitbag_rgr",
 			"B_Kitbag_mcamo",
 			"B_Kitbag_sgg",
-			"B_Bergen_blk",
-			"B_Bergen_rgr",
-			"B_Bergen_mcamo",
-			"B_Bergen_sgg",
-			"B_Carryall_khk",
-			"B_Carryall_mcamo",
-			"B_Carryall_oli",
-			"B_Carryall_oucamo"
+			"B_Bergen_dgtl_F",
+			"B_Carryall_khk"
 		]
 	],
 	[ // INDUSTRIAL
@@ -342,15 +361,10 @@ lootBackpack_list =
 			"B_FieldPack_oucamo",
 			"B_Kitbag_cbr",
 			"B_Kitbag_rgr",
+			"B_Kitbag_rgr",
+			"B_Kitbag_rgr",
 			"B_Kitbag_mcamo",
 			"B_Kitbag_sgg",
-			"B_Bergen_blk",
-			"B_Bergen_rgr",
-			"B_Bergen_mcamo",
-			"B_Bergen_sgg",
-			"B_Carryall_khk",
-			"B_Carryall_mcamo",
-			"B_Carryall_oli",
 			"B_Carryall_oucamo"
 		]
 	]
@@ -373,7 +387,11 @@ lootworldObject_list =
 			"Land_Can_V3_F",                    // energydrink
 			"Land_Suitcase_F",                  // repairkit
 			"Land_CanisterOil_F",               // syphon hose
-			"Land_CanisterFuel_F"               // jerrycan
+			"Land_CanisterFuel_F",               // jerrycan
+			"Land_WaterPurificationTablets_F",   //LSD
+			"Land_VitaminBottle_F",             //WEED
+			"Land_PowderedMilk_F",              //cocaine
+			"Land_PainKillers_F"                //heroin
 		]
 	],
 	[ // MILITARY
@@ -384,7 +402,11 @@ lootworldObject_list =
 			"Land_Can_V3_F",                    // energydrink
 			"Land_Suitcase_F",                  // repairkit
 			"Land_CanisterOil_F",               // syphon hose
-			"Land_CanisterFuel_F"               // jerrycan
+			"Land_CanisterFuel_F",               // jerrycan
+			"Land_WaterPurificationTablets_F",   //LSD
+			"Land_VitaminBottle_F",             //WEED
+			"Land_PowderedMilk_F",              //cocaine
+			"Land_PainKillers_F"                //heroin
 		]
 	],
 	[ // INDUSTRIAL
@@ -398,7 +420,11 @@ lootworldObject_list =
 			"Land_CanisterOil_F",               // syphon hose
 			"Land_CanisterOil_F",               // syphon hose
 			"Land_CanisterFuel_F",              // jerrycan
-			"Land_CanisterFuel_F"               // jerrycan
+			"Land_CanisterFuel_F",               // jerrycan
+			"Land_WaterPurificationTablets_F",   //LSD
+			"Land_VitaminBottle_F",             //WEED
+			"Land_PowderedMilk_F",              //cocaine
+			"Land_PainKillers_F"                //heroin
 		]
 	],
 	[ // RESEARCH
@@ -409,7 +435,11 @@ lootworldObject_list =
 			"Land_Can_V3_F",                    // energydrink
 			"Land_Suitcase_F",                  // repairkit
 			"Land_CanisterOil_F",               // syphon hose
-			"Land_CanisterFuel_F"               // jerrycan
+			"Land_CanisterFuel_F",               // jerrycan
+			"Land_WaterPurificationTablets_F",   //LSD
+			"Land_VitaminBottle_F",             //WEED
+			"Land_PowderedMilk_F",              //cocaine
+			"Land_PainKillers_F"                //heroin
 		]
 	]
 ];

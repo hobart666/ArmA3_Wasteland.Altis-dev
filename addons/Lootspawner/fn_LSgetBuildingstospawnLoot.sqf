@@ -158,6 +158,18 @@ _begintime = diag_tickTime;
 								if(_loot == "Land_Suitcase_F") then {
 									_lootholder setVariable["mf_item_id", "repairkit", true];
 								};
+								if(_loot == "Land_WaterPurificationTablets_F") then {
+									_lootholder setVariable["mf_item_id", "lsd", true];
+								};
+								if(_loot == "Land_VitaminBottle_F") then {
+									_lootholder setVariable["mf_item_id", "marijuana", true];
+								};
+								if(_loot == "Land_PowderedMilk_F") then {
+									_lootholder setVariable["mf_item_id", "cocaine", true];
+								};
+								if(_loot == "Land_PainKillers_F") then {
+									_lootholder setVariable["mf_item_id", "heroin", true];
+								};
 								//if container clear its cargo
 								if (({_loot isKindOf _x} count exclcontainer_list) > 0) then {
 									clearWeaponCargoGlobal _lootholder;

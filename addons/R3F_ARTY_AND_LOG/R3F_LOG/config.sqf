@@ -5,7 +5,7 @@
  */
 R3F_LOG_CFG_remorqueurs =
 [
-	"SUV_01_base_F",
+	/*"SUV_01_base_F",
 	"Offroad_01_base_F",
 	"Offroad_02_base_F",
 	"Van_01_base_F",
@@ -14,7 +14,7 @@ R3F_LOG_CFG_remorqueurs =
 	"MRAP_01_base_F",
 	"MRAP_02_base_F",
 	"MRAP_03_base_F",
-	"Boat_Armed_01_base_F"
+	"Boat_Armed_01_base_F"*/
 ];
 
 /**
@@ -22,11 +22,11 @@ R3F_LOG_CFG_remorqueurs =
  */
 R3F_LOG_CFG_remorqueursH =
 [
-	"Truck_01_base_F",
+	/*"Truck_01_base_F",
 	"Truck_02_base_F",
 	"Truck_03_base_F",
 	"Wheeled_APC_F",
-	"Tank_F"
+	"Tank_F"*/
 ];
 
 R3F_LOG_CFG_remorqueurs append R3F_LOG_CFG_remorqueursH;
@@ -36,14 +36,14 @@ R3F_LOG_CFG_remorqueurs append R3F_LOG_CFG_remorqueursH;
  */
 R3F_LOG_CFG_objets_remorquables =
 [
-	"Car_F",
+	/*"Car_F",
 	"Ship_F",
 	"Plane",
 	"UAV_03_base_F",
 	"Heli_Light_01_base_F",
 	"Heli_Light_02_base_F",
 	"Heli_light_03_base_F",
-	"Heli_Attack_01_base_F"
+	"Heli_Attack_01_base_F"*/
 ];
 
 /**
@@ -51,7 +51,7 @@ R3F_LOG_CFG_objets_remorquables =
  */
 R3F_LOG_CFG_objets_remorquablesH =
 [
-	"Wheeled_APC_F",
+	/*"Wheeled_APC_F",
 	"Tank_F",
 	"Heli_Attack_02_base_F",
 	"Heli_Transport_01_base_F",
@@ -59,11 +59,8 @@ R3F_LOG_CFG_objets_remorquablesH =
 	"Heli_Transport_03_base_F",
 	"Heli_Transport_04_base_F",
 	"VTOL_base_F",
-	"UAV_05_Base_F",
-	"Plane_Fighter_01_Base_F",
-	"Plane_Fighter_02_Base_F",
 	"Plane_CAS_01_base_F",
-	"Plane_CAS_02_base_F"
+	"Plane_CAS_02_base_F"*/
 ];
 
 R3F_LOG_CFG_objets_remorquables append R3F_LOG_CFG_objets_remorquablesH;
@@ -75,14 +72,14 @@ R3F_LOG_CFG_objets_remorquables append R3F_LOG_CFG_objets_remorquablesH;
  */
 R3F_LOG_CFG_heliporteurs =
 [
-	//"Helicopter_Base_F"
+	/*//"Helicopter_Base_F"
 	//"Heli_Light_01_base_F",
 	"Heli_Light_02_base_F",
 	"Heli_light_03_base_F",
 	"Heli_Attack_01_base_F",
 	"Heli_Attack_02_base_F",
 	"Heli_Transport_01_base_F",
-	"VTOL_base_F"
+	"VTOL_base_F"*/
 ];
 
 /**
@@ -90,9 +87,9 @@ R3F_LOG_CFG_heliporteurs =
  */
 R3F_LOG_CFG_heliporteursH =
 [
-	"Heli_Transport_02_base_F",
+	/*"Heli_Transport_02_base_F",
 	"Heli_Transport_03_base_F",
-	"Heli_Transport_04_base_F"
+	"Heli_Transport_04_base_F"*/
 ];
 
 R3F_LOG_CFG_heliporteurs append R3F_LOG_CFG_heliporteursH;
@@ -102,11 +99,11 @@ R3F_LOG_CFG_heliporteurs append R3F_LOG_CFG_heliporteursH;
  */
 R3F_LOG_CFG_objets_heliportables =
 [
-	"Car_F",
+	/*"Car_F",
 	"Ship_F",
 	"Plane",
 	"UAV_03_base_F",
-	"Heli_Light_01_base_F"
+	"Heli_Light_01_base_F"*/
 ];
 
 /**
@@ -114,7 +111,7 @@ R3F_LOG_CFG_objets_heliportables =
  */
 R3F_LOG_CFG_objets_heliportablesH =
 [
-	"Wheeled_APC_F",
+	/*"Wheeled_APC_F",
 	"Tank_F",
 	"Heli_Light_02_base_F",
 	"Heli_light_03_base_F",
@@ -128,7 +125,7 @@ R3F_LOG_CFG_objets_heliportablesH =
 	"Plane_CAS_02_base_F",
 	"Plane_Fighter_03_base_F",
 	"VTOL_01_base_F",
-	"VTOL_02_base_F"
+	"VTOL_02_base_F"*/
 ];
 
 R3F_LOG_CFG_objets_heliportables append R3F_LOG_CFG_objets_heliportablesH;
@@ -175,7 +172,10 @@ R3F_LOG_CFG_transporteurs =
 	["Heli_Attack_02_base_F", 20],
 	["Plane_Civil_01_base_F", 5],
 	["VTOL_01_base_F", 50],
-	["VTOL_02_base_F", 30]
+	["VTOL_02_base_F", 54],
+
+	//CCG addition as per players request
+	["SDV_01_base_F", 6]
 ];
 
 
@@ -201,11 +201,11 @@ R3F_LOG_CFG_objets_transportables =
 	["Land_BagFence_Round_F", 2],
 	["Land_BagFence_Short_F", 2],
 	["Land_BarGate_F", 3],
-	["Land_Canal_WallSmall_10m_F", 4],
-	["Land_Canal_Wall_Stairs_F", 3],
+	//["Land_Canal_WallSmall_10m_F", 4],
+	//["Land_Canal_Wall_Stairs_F", 3],
 	["Land_CargoBox_V1_F", 5],
 	["Land_Cargo_Patrol_V1_F", 7],
-	["Land_Cargo_Tower_V1_F", 30],
+	//["Land_Cargo_Tower_V1_F", 30],
 	["Land_CncBarrier_F", 4],
 	["Land_CncBarrierMedium_F", 4],
 	["Land_CncBarrierMedium4_F", 4],
@@ -235,7 +235,19 @@ R3F_LOG_CFG_objets_transportables =
 	["Land_Shoot_House_Wall_F", 3],
 	["Land_Stone_8m_F", 5],
 	["Land_ToiletBox_F", 2],
-	["Land_BarrelWater_F", 2]
+	["Land_BarrelWater_F", 2],
+
+	//CCG Stuff
+	//["Land_Cargo_Tower_V4_F", 21],
+	["Land_PillboxBunker_01_hex_F", 12],
+	["Land_PillboxBunker_01_rectangle_F", 21],
+	["Land_PillboxBunker_01_big_F", 30],
+	["Land_PillboxWall_01_6m_round_F", 9],
+	["Land_Shoot_House_Panels_F", 2],
+	["Land_Slum_House02_F", 15],
+	["Land_Cargo_HQ_V2_F", 25],
+	["Box_NATO_AmmoVeh_F", 25],
+	["CamoNet_ghex_Curator_F", 2]
 ];
 
 /****** MOVABLE-BY-PLAYER OBJECTS / OBJETS DEPLACABLES PAR LE JOUEUR ******/
@@ -259,11 +271,11 @@ R3F_LOG_CFG_objets_deplacables =
 	"Land_BagFence_Round_F",
 	"Land_BagFence_Short_F",
 	"Land_BarGate_F",
-	"Land_Canal_WallSmall_10m_F",
-	"Land_Canal_Wall_Stairs_F",
+	//"Land_Canal_WallSmall_10m_F",
+	//"Land_Canal_Wall_Stairs_F",
 	"Land_CargoBox_V1_F",
 	"Land_Cargo_Patrol_V1_F",
-	"Land_Cargo_Tower_V1_F",
+	//"Land_Cargo_Tower_V1_F",
 	"Land_CncBarrier_F",
 	"Land_CncBarrierMedium_F",
 	"Land_CncBarrierMedium4_F",
@@ -293,5 +305,17 @@ R3F_LOG_CFG_objets_deplacables =
 	"Land_Shoot_House_Wall_F",
 	"Land_Stone_8m_F",
 	"Land_ToiletBox_F",
-	"Land_BarrelWater_F"
+	"Land_BarrelWater_F",
+	
+	//CCG
+	//"Land_Cargo_Tower_V4_F",
+	"Land_PillboxBunker_01_hex_F",
+	"Land_PillboxBunker_01_rectangle_F",
+	"Land_PillboxBunker_01_big_F",
+	"Land_PillboxWall_01_6m_round_F",
+	"Land_Shoot_House_Panels_F",
+	"Land_Slum_House02_F",
+	"Land_Cargo_HQ_V2_F",
+	"Box_NATO_AmmoVeh_F",
+	"CamoNet_ghex_Curator_F"
 ];
