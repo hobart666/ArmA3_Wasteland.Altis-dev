@@ -28,11 +28,12 @@ _spawnPos = _this select 1;
 	_currHeli setPosATL [_finalPos select 0, _finalPos select 1, (_finalPos select 2) + 0.1];
 	_currHeli setDir random 360;
 	_currHeli setVelocity [0,0,0.01];
+	_currHeli setDamage 0.5;
 
 	[_currHeli] call vehicleSetup;
 
-	_currHeli setFuel (0.1 + random 0.2);
-	_currHeli setVehicleAmmo 0.5;
+	_currHeli setFuel (0 + random 0.1);
+	_currHeli setVehicleAmmo 0;
 	// _currHeli spawn cleanVehicleWreck;
 
 	_currHeli enableSimulationGlobal true;

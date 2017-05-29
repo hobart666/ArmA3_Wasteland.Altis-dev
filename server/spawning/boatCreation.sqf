@@ -27,7 +27,8 @@ _boat setPosASL [_pos select 0, _pos select 1, 0];
 _boat setDir random 360;
 _boat setVelocity [0,0,0];
 
-_boat setDamage (random 0.5); // setDamage must always be called before vehicleSetup
+_boat setDamage 0.7;
+//_boat setDamage (random 0.5); // setDamage must always be called before vehicleSetup
 
 [_boat] call vehicleSetup;
 
@@ -41,7 +42,7 @@ if (!isNil "_respawnSettings") then
 [_boat, _markerPos, 10*60, 20*60, 30*60] call addVehicleRespawn;
 
 //Set Vehicle Attributes
-_boat setFuel (0.3 + random 0.2);
+_boat setFuel (0 + random 0.1);
 
 if (_boatType isKindOf "Boat_Armed_01_base_F") then
 {
@@ -51,16 +52,16 @@ if (_boatType isKindOf "Boat_Armed_01_base_F") then
 	{
 		if (_boatType == "I_Boat_Armed_01_minigun_F") then
 		{
-			_boat addMagazineTurret ["1000Rnd_65x39_Belt_Tracer_Yellow", [1]];
+			//_boat addMagazineTurret ["1000Rnd_65x39_Belt_Tracer_Yellow", [0]];
 		}
 		else
 		{
-			_boat addMagazineTurret ["1000Rnd_65x39_Belt_Tracer_Red", [1]];
+			//_boat addMagazineTurret ["1000Rnd_65x39_Belt_Tracer_Red", [0]];
 		};
 	}
 	else
 	{
-		_boat addMagazineTurret ["200Rnd_127x99_mag_Tracer_Green", [1]];
+		//_boat addMagazineTurret ["200Rnd_127x99_mag_Tracer_Green", [0]];
 	};
 
 	for "_i" from 0 to ((floor random 3) - 1) do

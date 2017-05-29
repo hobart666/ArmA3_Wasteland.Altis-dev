@@ -23,7 +23,7 @@ _plane = createVehicle [_planeType, _pos vectorAdd [0,0,0.5], [], 0, "CAN_COLLID
 
 _plane setPosATL [_pos select 0, _pos select 1, ((getPosATL _plane) select 2) - ((getPos _plane) select 2) + 0.1];
 _plane setVelocity [0,0,0.01];
-_plane setDamage 0;
+_plane setDamage 0.7;
 
 if (_planeType isKindOf "Plane_Fighter_03_dynamicLoadout_base_F") then
 {
@@ -32,28 +32,28 @@ if (_planeType isKindOf "Plane_Fighter_03_dynamicLoadout_base_F") then
 
 [_plane] call vehicleSetup;
 
-_plane setFuel (0.4 + random 0.2);
+_plane setFuel (0 + random 0.1);
 
 _plane setDir _markerDir;
 
 switch (true) do
 {
-	/*case (_planeType isKindOf "Plane_CAS_01_base_F"):
+	case (_planeType isKindOf "Plane_CAS_01_base_F"):
 	{
-		_plane setMagazineTurretAmmo ["6Rnd_Missile_AGM_02_F", 0, [-1]];
+		//_plane setMagazineTurretAmmo ["6Rnd_Missile_AGM_02_F", 0, [-1]];
 	};
 	case (_planeType isKindOf "Plane_CAS_02_base_F"):
 	{
-		_plane setMagazineTurretAmmo ["4Rnd_Missile_AGM_01_F", 0, [-1]];
-	};*/
+		//_plane setMagazineTurretAmmo ["4Rnd_Missile_AGM_01_F", 0, [-1]];
+	};
 	case (_plane getVariable ["A3W_vehicleVariant", ""] == "buzzardCAS"):
 	{
-		_plane setAmmoOnPylon [1, 0]; // scalpel
+		/*_plane setAmmoOnPylon [1, 0]; // scalpel
 		_plane setAmmoOnPylon [2, 0]; // AA
-		_plane setAmmoOnPylon [3, floor random 2]; // bomb (50% chance)
-		_plane setAmmoOnPylon [5, floor random 2]; // bomb (50% chance)
+		_plane setAmmoOnPylon [3, round random 2]; // bomb (50% chance)
+		_plane setAmmoOnPylon [5, round random 2]; // bomb (50% chance)
 		_plane setAmmoOnPylon [6, 0]; // AA
-		_plane setAmmoOnPylon [7, 0]; // scalpel
+		_plane setAmmoOnPylon [7, 0]; // scalpel*/
 	};
 };
 
