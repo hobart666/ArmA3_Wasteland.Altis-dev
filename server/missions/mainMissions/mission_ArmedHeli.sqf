@@ -9,7 +9,7 @@
 if (!isServer) exitwith {};
 #include "mainMissionDefines.sqf";
 
-private ["_vehicleClass", "_nbUnits"];
+private ["_vehicleClass", "_nbUnits", "_variant"];
 
 _setupVars =
 {
@@ -22,6 +22,12 @@ _setupVars =
 		"O_Heli_Attack_02_dynamicLoadout_F",
 		"I_Heli_light_03_dynamicLoadout_F"
 	];
+
+	if (_vehicleClass isEqualType []) then
+	{
+		_variant = _vehicleClass param [1,"",[""]];
+		_vehicleClass = _vehicleClass select 0;
+	};
 
 	_missionType = "Armed Helicopter";
 	_locationsArray = MissionSpawnMarkers;
