@@ -13,7 +13,7 @@ if (!isServer && hasInterface) exitWith {};
 // configure cleanup below this line
 
 #define CLEANUP_INTERVAL (5*60) // Interval to run the cleanup
-#define ITEM_CLEANUP_TIME (30*60) // Dropped player items cleanup time
+#define ITEM_CLEANUP_TIME (15*60) // Dropped player items cleanup time
 #define MONEY_CLEANUP_TIME (30*60) // Dropped money cleanup time
 #define STORE_CLEANUP_TIME (30*60) // Dropped store items cleanup time
 #define STORE_CLEANUP_RADIUS 7.5 // Radius in meters to scan near store NPCs for dropped items
