@@ -65,9 +65,7 @@ if (isNil "playerData_alive" || !isNil "playerData_resetPos") then
 {
 	[player, "AmovPknlMstpSnonWnonDnon"] call switchMoveGlobal;
 
-
 	9999 cutText ["Loading...", "BLACK", 0.01];
-
 // supporters load here
 
     _this call vaforall;
