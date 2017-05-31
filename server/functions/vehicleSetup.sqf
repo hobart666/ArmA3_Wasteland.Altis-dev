@@ -25,7 +25,7 @@ clearBackpackCargoGlobal _vehicle;
 // Disable thermal on all manned vehicles
 if (round getNumber (configFile >> "CfgVehicles" >> _class >> "isUav") < 1) then
 {
-	_vehicle disableTIEquipment true;
+	_vehicle disableTIEquipment false;
 };
 
 if ({_vehicle isKindOf _x} count ["StaticMGWeapon","StaticGrenadeLauncher","StaticMortar"] > 0) then
