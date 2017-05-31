@@ -13,7 +13,7 @@
 
 [
 	["TERRITORY_THRONOS_CASTLE", "Thronos Castle", 1000, "CASTLE"],
-	//["TERRITORY_KASTRO_CASTLE", "Kastro Castle", 500, "CASTLE"],
+	["TERRITORY_KASTRO_CASTLE", "Kastro Castle", 1000, "CASTLE"],
 	["TERRITORY_SW_AIRFIELD", "AAC Airfield", 1000, "AIRFIELD"],
 	["TERRITORY_MAIN_AIRBASE_SW", "Altis Airport (SW)", 1750, "AIRBASE"],
 	["TERRITORY_MAIN_AIRBASE_CENTER", "Altis Airport (Center)", 1750, "AIRBASE"],
@@ -31,7 +31,7 @@
 	["TERRITORY_ORINO", "Orino Pipe Co", 800, "RUINS"],
 	["TERRITORY_DUMP2", "Tafos Dump", 800, "RUINS"],
 	["TERRITORY_MINE", "Ye Old Mine", 800, "RUINS"],
-	["TERRITORY_MINE", "Faronaki Beach", 800, "RUINS"],
+	["TERRITORY_BEACH", "Faronaki Beach", 800, "RUINS"],
 	["TERRITORY_ARTINARKI_RUINS", "Artinarki Ruins", 1000, "RUINS"],
 	["TERRITORY_MAGOS_TRANSMITTER", "Magos Transmitter", 1000, "TRANSMITTER"],
 	["TERRITORY_PYRSOS_TRANSMITTER", "Pyrsos Transmitter", 1000, "TRANSMITTER"],
