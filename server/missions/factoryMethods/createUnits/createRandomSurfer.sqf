@@ -36,6 +36,13 @@ _rank = param [2, "", [""]];
 _soldier = _group createUnit [_soldierTypes call BIS_fnc_selectRandom, _position, [], 0, "NONE"];
 _soldier addUniform (_uniformTypes call BIS_fnc_selectRandom);
 _soldier addVest (_vestTypes call BIS_fnc_selectRandom);
+_soldier addItem "ItemRadio";
+_soldier addItem "ItemMap";
+_soldier addItem "ItemGPS";
+_soldier addItem "ItemCompass";
+_soldier addItem "ItemWatch";
+_soldier addItem "NVGoggles";
+_soldier addItem "Rangefinder";
 [_soldier, _weaponTypes call BIS_fnc_selectRandom, 3] call BIS_fnc_addWeapon;
 
 if (_rank != "") then

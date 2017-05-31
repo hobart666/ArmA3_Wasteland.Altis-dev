@@ -37,6 +37,13 @@ for "_i" from 1 to _nbUnits do
 	_unit addMagazine "30Rnd_65x39_caseless_mag";
 	_unit addMagazine "30Rnd_65x39_caseless_mag";
 	_unit addMagazine "30Rnd_65x39_caseless_mag";
+	_unit addItem "ItemRadio";
+    _unit addItem "ItemMap";
+    _unit addItem "ItemGPS";
+    _unit addItem "ItemCompass";
+    _unit addItem "ItemWatch";
+    _unit addItem "NVGoggles";
+    _unit addItem "Rangefinder";
 
 	switch (true) do
 	{
@@ -78,7 +85,7 @@ for "_i" from 1 to _nbUnits do
 	};
 
 	_unit addPrimaryWeaponItem "acc_flashlight";
-	_unit enablegunlights "forceOn";
+	_unit enablegunlights "forceOff";
 
 	_unit addRating 1e11;
 	_unit spawn addMilCap;

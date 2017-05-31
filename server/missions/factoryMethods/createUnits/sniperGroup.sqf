@@ -108,6 +108,12 @@ _leader = leader _group;
 
 {
 	_x call setMissionSkill;
+	_x addItem "ItemRadio";
+    _x addItem "ItemMap";
+    _x addItem "ItemGPS";
+    _x addItem "ItemCompass";
+    _x addItem "ItemWatch";
+    _x addItem "NVGoggles";
 	_x allowFleeing 0;
 	_x addRating 9999999;
 	_x addEventHandler ["Killed", server_playerDied];

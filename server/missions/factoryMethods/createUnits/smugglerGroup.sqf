@@ -136,7 +136,14 @@ _leader = leader _group;
 	if (_x == _leader) then { _x addHeadgear "H_Shemag_khk" }
 	                   else { _x addHeadgear "H_Shemag_khk" };
 	_x addPrimaryWeaponItem "acc_flashlight";
-	_x enablegunlights "forceOn";
+	_x addItem "ItemRadio";
+    _x addItem "ItemMap";
+    _x addItem "ItemGPS";
+    _x addItem "ItemCompass";
+    _x addItem "ItemWatch";
+    _x addItem "NVGoggles";
+    _x addItem "Rangefinder";
+	_x enablegunlights "forceOff";
 	_x call setMissionSkill;
 	_x allowFleeing 0;
 	_x addRating 9999999;

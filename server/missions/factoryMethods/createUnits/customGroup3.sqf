@@ -39,6 +39,13 @@ for "_i" from 1 to _nbUnits do
 
 	_unit addVest "V_TacVest_blk_POLICE";
 	_unit addUniform "U_C_Driver_3";
+	_unit addItem "ItemRadio";
+    _unit addItem "ItemMap";
+    _unit addItem "ItemGPS";
+    _unit addItem "ItemCompass";
+    _unit addItem "ItemWatch";
+    _unit addItem "NVGoggles";
+    _unit addItem "Rangefinder";
 
 	switch (true) do
 	{
@@ -110,7 +117,7 @@ for "_i" from 1 to _nbUnits do
 	};
 
 	_unit addPrimaryWeaponItem "acc_flashlight";
-	_unit enablegunlights "forceOn";
+	_unit enablegunlights "forceOff";
 
 	_unit addRating 1e11;
 	_unit addHeadgear "H_Cap_press";

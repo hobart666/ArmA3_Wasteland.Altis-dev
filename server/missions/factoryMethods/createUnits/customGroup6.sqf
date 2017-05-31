@@ -41,6 +41,13 @@ for "_i" from 1 to _nbUnits do
 	_unit addMagazine "30Rnd_556x45_Stanag";
 	_unit addMagazine "30Rnd_556x45_Stanag";
 	_unit addMagazine "30Rnd_556x45_Stanag";
+	_unit addItem "ItemRadio";
+    _unit addItem "ItemMap";
+    _unit addItem "ItemGPS";
+    _unit addItem "ItemCompass";
+    _unit addItem "ItemWatch";
+    _unit addItem "NVGoggles";
+    _unit addItem "Rangefinder";
 
 	switch (true) do
 	{
