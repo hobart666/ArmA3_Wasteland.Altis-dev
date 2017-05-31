@@ -12,13 +12,16 @@ private ["_convoyVeh","_veh1","_veh2","_veh3","_veh4","_veh5","_createVehicle","
 _setupVars =
 {
 	_missionType = "Altis Patrol";
-	_locationsArray = nil;
+	_locationsArray = LandConvoyPaths;
+	//_locationsArray = nil;
 };
 
 _setupObjects =
 {
-	_town = (call cityList) call BIS_fnc_selectRandom;
-	_missionPos = markerPos (_town select 0);
+	//_town = (call cityList) call BIS_fnc_selectRandom;
+	//_missionPos = markerPos (_town select 0);
+	private ["_starts", "_startDirs", "_waypoints"];
+	call compile preprocessFileLineNumbers format ["mapConfig\convoys\%1.sqf", _missionLocation];
 
 	_convoyVeh = ["I_MRAP_03_hmg_F","I_MBT_03_cannon_F","O_APC_Tracked_02_AA_F","I_MBT_03_cannon_F","I_MRAP_03_gmg_F"];
 	
