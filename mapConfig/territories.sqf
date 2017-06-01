@@ -32,6 +32,7 @@
 	["TERRITORY_DUMP2", "Tafos Dump", 800, "RUINS"],
 	["TERRITORY_MINE", "Ye Old Mine", 800, "RUINS"],
 	["TERRITORY_BEACH", "Faronaki Beach", 800, "RUINS"],
+	["TERRITORY_DAM", "Xiro Dam Outpost", 1000, "MILITARY"],
 	["TERRITORY_ARTINARKI_RUINS", "Artinarki Ruins", 1000, "RUINS"],
 	["TERRITORY_MAGOS_TRANSMITTER", "Magos Transmitter", 1000, "TRANSMITTER"],
 	["TERRITORY_PYRSOS_TRANSMITTER", "Pyrsos Transmitter", 1000, "TRANSMITTER"],
