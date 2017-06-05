@@ -79,7 +79,7 @@ _setupObjects =
 		_vehicle
 	};
 
-	_aiGroup = createGroup CIVILIAN;
+	_aiGroup = createGroup EAST;
 
 	_vehicles =
 	[
@@ -95,7 +95,7 @@ _setupObjects =
 	_aiGroup setBehaviour "SAFE"; // units feel safe until they spot an enemy or get into contact
 	_aiGroup setFormation "STAG COLUMN";
 
-	_speedMode = if (missionDifficultyHard) then { "NORMAL" } else { "LIMITED" };
+	_speedMode = if (missionDifficultyHard) then { "NORMAL" } else { "NORMAL" };
 
 	_aiGroup setSpeedMode _speedMode;
 

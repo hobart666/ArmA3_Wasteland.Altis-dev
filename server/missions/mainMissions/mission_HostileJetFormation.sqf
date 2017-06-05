@@ -21,8 +21,8 @@ _setupObjects =
 
 	_planeChoices =
 	[
-		["B_Plane_CAS_01_dynamicLoadout_F", "B_Plane_CAS_01_dynamicLoadout_F"],
-		["B_Plane_Fighter_01_Stealth_F", "O_Plane_Fighter_02_Stealth_F"]
+		["O_Plane_CAS_02_dynamicLoadout_F", "O_Plane_CAS_02_dynamicLoadout_F"],
+		["O_Plane_Fighter_02_F", "O_Plane_Fighter_02_Stealth_F"]
 	];
 
 	_convoyVeh = _planeChoices call BIS_fnc_selectRandom;
@@ -69,7 +69,7 @@ _setupObjects =
 		_vehicle
 	};
 
-	_aiGroup = createGroup CIVILIAN;
+	_aiGroup = createGroup EAST;
 
 	_vehicles =
 	[

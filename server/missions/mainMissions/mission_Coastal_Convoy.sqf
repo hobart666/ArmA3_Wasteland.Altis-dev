@@ -25,15 +25,15 @@ _setupObjects =
 
 	_vehChoices =
 	[
-		["B_Boat_Armed_01_minigun_F", "B_Heli_Transport_01_F"],
+		["O_T_Boat_Armed_01_hmg_F", "orcaDAGR"],
 		["O_Boat_Armed_01_hmg_F", ["O_Heli_Light_02_dynamicLoadout_F", "orcaDAGR"]],
-		["I_Boat_Armed_01_minigun_F", "I_Heli_light_03_dynamicLoadout_F"]
+		["O_T_Boat_Armed_01_hmg_F", "O_Heli_Attack_02_black_F"]
 	];
 
 	if (missionDifficultyHard) then
 	{
-		(_vehChoices select 0) set [1, "B_Heli_Attack_01_dynamicLoadout_F"];
-		(_vehChoices select 1) set [1, "O_Heli_Attack_02_dynamicLoadout_F"];
+		(_vehChoices select 0) set [1, "O_Heli_Attack_02_dynamicLoadout_F"];
+		(_vehChoices select 1) set [1, "O_Heli_Attack_02_black_F"];
 		(_vehChoices select 2) set [1, "O_Heli_Attack_02_dynamicLoadout_F"];
 	};
 
@@ -124,7 +124,7 @@ _setupObjects =
 		_vehicle
 	};
 
-	_aiGroup = createGroup CIVILIAN;
+	_aiGroup = createGroup EAST;
 
 	_vehicles =
 	[

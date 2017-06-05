@@ -8,22 +8,22 @@ class EditorData
 	toggles=6;
 	class ItemIDProvider
 	{
-		nextID=6948;
+		nextID=6970;
 	};
 	class MarkerIDProvider
 	{
-		nextID=198;
+		nextID=205;
 	};
 	class LayerIndexProvider
 	{
-		nextID=48;
+		nextID=84;
 	};
 	class Camera
 	{
-		pos[]={8755.5908,370.07687,13738.453};
-		dir[]={0.88097996,-0.45220166,0.13954866};
-		up[]={0.44664487,0.89191037,0.070750341};
-		aside[]={0.15645546,5.6720455e-007,-0.98772544};
+		pos[]={8177.7202,95.906013,24990.143};
+		dir[]={0.37916061,-0.30685839,-0.8729853};
+		up[]={0.12224569,0.95174927,-0.28146183};
+		aside[]={-0.91723424,-9.8152668e-008,-0.39837924};
 	};
 };
 binarizationWanted=0;
@@ -232,7 +232,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=5485;
+		items=5501;
 		class Item0
 		{
 			dataType="Group";
@@ -86635,7 +86635,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6128.5,23.520498,6306.5498};
+						position[]={6128.5,23.520756,6306.5498};
 					};
 					side="West";
 					flags=5;
@@ -86648,6 +86648,7 @@ class Mission
 					};
 					id=5717;
 					type="B_soldier_AAA_F";
+					atlOffset=0.00025749207;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -86778,7 +86779,7 @@ class Mission
 				class Item10
 				{
 					dataType="Waypoint";
-					position[]={6147.7349,23.518829,6333.7314};
+					position[]={6147.7349,23.518417,6333.731};
 					speed="LIMITED";
 					combat="SAFE";
 					class Effects
@@ -86787,7 +86788,7 @@ class Mission
 					showWP="NEVER";
 					id=5724;
 					type="Move";
-					atlOffset=182.09145;
+					atlOffset=182.091;
 				};
 				class Item11
 				{
@@ -88176,15 +88177,15 @@ class Mission
 		class Item4551
 		{
 			dataType="Marker";
-			position[]={6192,-2.2376064e-022,6286};
+			position[]={6192,0,6286};
 			name="TERRITORY_CARRIER";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
 			fillName="BDiagonal";
-			a=210;
-			b=60;
-			angle=36.21299;
+			a=180;
+			b=42;
+			angle=36.212994;
 			id=5797;
 			atlOffset=154.75066;
 		};
@@ -105009,8 +105010,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8843.4824,46.140907,25249.703};
-						angles[]={0,1.0654013,0};
+						position[]={8795.2627,64.825577,25171.98};
+						angles[]={6.2126393,1.0654013,6.1076751};
 					};
 					side="West";
 					flags=6;
@@ -105019,7 +105020,7 @@ class Mission
 					};
 					id=6714;
 					type="B_UAV_AI";
-					atlOffset=-0.054000854;
+					atlOffset=-0.049003601;
 				};
 			};
 			class Attributes
@@ -105048,27 +105049,28 @@ class Mission
 				};
 			};
 			id=6712;
-			atlOffset=-0.054000854;
+			atlOffset=-0.049003601;
 		};
 		class Item5464
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8843.6816,48.624268,25249.908};
-				angles[]={0,1.0654013,0};
+				position[]={8795.6992,67.285446,25171.756};
+				angles[]={6.2126393,1.0654013,6.1076751};
 			};
 			side="West";
 			flags=6;
 			class Attributes
 			{
+				lock="LOCKED";
 				init="[this] call A3W_fnc_setupMissionObject";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 			};
 			id=6713;
 			type="B_AAA_System_01_F";
-			atlOffset=-0.054000854;
+			atlOffset=-0.049003601;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -105253,7 +105255,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="RED";
+							value="YELLOW";
 						};
 					};
 				};
@@ -105323,6 +105325,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				lock="LOCKED";
 				init="[this] call A3W_fnc_setupMissionObject";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
@@ -105365,8 +105368,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8820.9971,26.456797,25351.551};
-						angles[]={0,0.44200465,0};
+						position[]={8770.251,64.891312,25196.521};
+						angles[]={0.098349303,0.44200465,0.05726425};
 					};
 					side="West";
 					flags=6;
@@ -105376,6 +105379,7 @@ class Mission
 					};
 					id=6730;
 					type="B_UAV_AI";
+					atlOffset=-0.01599884;
 				};
 			};
 			class Attributes
@@ -105404,25 +105408,28 @@ class Mission
 				};
 			};
 			id=6728;
+			atlOffset=-0.01599884;
 		};
 		class Item5469
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8821.1357,28.414474,25351.662};
-				angles[]={0,0.44200465,0};
+				position[]={8770.1387,66.847832,25196.664};
+				angles[]={0.098349303,0.44200465,0.05726425};
 			};
 			side="West";
 			flags=6;
 			class Attributes
 			{
+				lock="LOCKED";
 				init="[this] call A3W_fnc_setupMissionObject";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 			};
 			id=6729;
 			type="B_SAM_System_02_F";
+			atlOffset=-0.01599884;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -107400,32 +107407,32 @@ class Mission
 		class Item5476
 		{
 			dataType="Marker";
-			position[]={9273.9053,0,13839.708};
+			position[]={9294.5,0,13824.5};
 			name="sp1";
 			type="Empty";
 			angle=233.37498;
 			id=6937;
-			atlOffset=-29.098465;
+			atlOffset=-30.312634;
 		};
 		class Item5477
 		{
 			dataType="Marker";
-			position[]={9159.3389,0,13791.908};
+			position[]={9164.5,0,13841.5};
 			name="Sp2";
 			type="Empty";
 			angle=95.707962;
 			id=6938;
-			atlOffset=-30.013618;
+			atlOffset=-30.362696;
 		};
 		class Item5478
 		{
 			dataType="Marker";
-			position[]={9223.3643,0,13813.506};
+			position[]={9145.5,0,13757};
 			name="wp1";
 			type="Empty";
 			angle=184.39897;
 			id=6939;
-			atlOffset=-27.556372;
+			atlOffset=-29.728024;
 		};
 		class Item5479
 		{
@@ -107460,20 +107467,22 @@ class Mission
 		class Item5482
 		{
 			dataType="Trigger";
-			position[]={9211,34.500237,13790};
+			position[]={9061,61,13801};
 			class Attributes
 			{
-				onActivation="_group = []execVM ""isis.sqf""; _group = []execVM ""isis2.sqf"";";
+				onActivation="_group = []execVM ""ai\isis2.sqf""; _group = []execVM ""ai\isis.sqf"";";
 				sizeA=150;
-				sizeB=150;
+				sizeB=200;
 				sizeC=150;
+				timeout[]={20,20,20};
+				interuptable=1;
 				repeatable=1;
 				activationBy="ANYPLAYER";
 				isRectangle=1;
 			};
 			id=6943;
 			type="EmptyDetector";
-			atlOffset=6.6269989;
+			atlOffset=8.504879;
 		};
 		class Item5483
 		{
@@ -107491,20 +107500,338 @@ class Mission
 			position[]={9272.5,0,13841};
 			name="wp6";
 			type="Empty";
-			angle=229.15697;
+			angle=229.15666;
 			id=6947;
 			atlOffset=-29.09059;
+		};
+		class Item5485
+		{
+			dataType="Marker";
+			position[]={9131.5,0,13895.5};
+			name="marker_198";
+			text="Capture for $100k";
+			type="mil_warning";
+			colorName="ColorGreen";
+			alpha=0.40681121;
+			a=0.5;
+			b=0.5;
+			id=6948;
+			atlOffset=-32.875961;
+		};
+		class Item5486
+		{
+			dataType="Marker";
+			position[]={6151.731,0,6404.8198};
+			name="marker_199";
+			text="Capture for $100k";
+			type="mil_warning";
+			colorName="ColorGreen";
+			alpha=0.40681121;
+			a=0.5;
+			b=0.5;
+			id=6949;
+			atlOffset=164.49373;
+		};
+		class Item5487
+		{
+			dataType="Trigger";
+			position[]={6222.5,-1.5258789e-005,6272};
+			angle=0.64652216;
+			class Attributes
+			{
+				onActivation="_group = []execVM ""ai\carrier.sqf"";";
+				sizeA=30;
+				sizeB=62;
+				sizeC=150;
+				timeout[]={30,50,60};
+				interuptable=1;
+				repeatable=1;
+				activationBy="ANYPLAYER";
+				isRectangle=1;
+			};
+			id=6950;
+			type="EmptyDetector";
+			atlOffset=155.68201;
+		};
+		class Item5488
+		{
+			dataType="Marker";
+			position[]={4400.5,0,5400};
+			name="Ca1";
+			type="Empty";
+			angle=49.085983;
+			id=6951;
+			atlOffset=185.97;
+		};
+		class Item5489
+		{
+			dataType="Marker";
+			position[]={6526.5,0,6356.5};
+			name="Ca2";
+			type="Empty";
+			angle=236.8382;
+			id=6952;
+			atlOffset=158.22806;
+		};
+		class Item5490
+		{
+			dataType="Marker";
+			position[]={6164.5,0,6308.5};
+			name="Ca3";
+			type="Empty";
+			angle=121.79698;
+			id=6953;
+			atlOffset=156.838;
+		};
+		class Item5491
+		{
+			dataType="Marker";
+			position[]={6095.5,0,6385.5};
+			name="g1";
+			type="Empty";
+			angle=326.80597;
+			id=6959;
+			atlOffset=159.75067;
+		};
+		class Item5492
+		{
+			dataType="Marker";
+			position[]={6328,0,6195.5};
+			name="g2";
+			type="Empty";
+			angle=121.16281;
+			id=6960;
+			atlOffset=142.8967;
+		};
+		class Item5493
+		{
+			dataType="Trigger";
+			position[]={6272.5,-0.00042724609,6235};
+			angle=0.64652216;
+			class Attributes
+			{
+				onActivation="_group = []execVM ""ai\carrier.sqf""; _group = []execVM ""ai\isis3.sqf"";";
+				sizeA=30;
+				sizeB=62;
+				sizeC=150;
+				timeout[]={20,20,20};
+				interuptable=1;
+				repeatable=1;
+				activationBy="ANYPLAYER";
+				isRectangle=1;
+			};
+			id=6961;
+			type="EmptyDetector";
+			atlOffset=151.69299;
+		};
+		class Item5494
+		{
+			dataType="Trigger";
+			position[]={6321.5,-0.00039672852,6198.5};
+			angle=0.64652216;
+			class Attributes
+			{
+				onActivation="_group = []execVM ""ai\isis3.sqf"";";
+				sizeA=30;
+				sizeB=62;
+				sizeC=150;
+				timeout[]={60,60,60};
+				interuptable=1;
+				repeatable=1;
+				activationBy="ANYPLAYER";
+				isRectangle=1;
+			};
+			id=6962;
+			type="EmptyDetector";
+			atlOffset=143.71899;
+		};
+		class Item5495
+		{
+			dataType="Trigger";
+			position[]={6174,-0.00032043457,6308.5};
+			angle=0.64652216;
+			class Attributes
+			{
+				onActivation="_group = []execVM ""ai\carrier.sqf"";";
+				sizeA=30;
+				sizeB=62;
+				sizeC=150;
+				timeout[]={90,90,90};
+				interuptable=1;
+				repeatable=1;
+				activationBy="ANYPLAYER";
+				isRectangle=1;
+			};
+			id=6963;
+			type="EmptyDetector";
+			atlOffset=156.407;
+		};
+		class Item5496
+		{
+			dataType="Trigger";
+			position[]={6126,0,6345.5};
+			angle=0.64652216;
+			class Attributes
+			{
+				onActivation="_group = []execVM ""ai\carrier.sqf""; _group = []execVM ""ai\isis3.sqf"";";
+				sizeA=30;
+				sizeB=62;
+				sizeC=150;
+				timeout[]={90,90,90};
+				interuptable=1;
+				repeatable=1;
+				activationBy="ANYPLAYER";
+				isRectangle=1;
+			};
+			id=6964;
+			type="EmptyDetector";
+			atlOffset=159.908;
+		};
+		class Item5497
+		{
+			dataType="Trigger";
+			position[]={6077.5,-0.00035095215,6381.5};
+			angle=0.64652216;
+			class Attributes
+			{
+				onActivation="_group = []execVM ""ai\carrier.sqf""; _group = []execVM ""ai\isis3.sqf"";";
+				sizeA=30;
+				sizeB=62;
+				sizeC=150;
+				timeout[]={90,90,90};
+				interuptable=1;
+				repeatable=1;
+				activationBy="ANYPLAYER";
+				isRectangle=1;
+			};
+			id=6965;
+			type="EmptyDetector";
+			atlOffset=159.207;
+		};
+		class Item5498
+		{
+			dataType="Trigger";
+			position[]={9353,42.5,13799.5};
+			class Attributes
+			{
+				onActivation="_group = []execVM ""ai\isis2.sqf""; _group = []execVM ""ai\isis.sqf"";";
+				sizeA=150;
+				sizeB=200;
+				sizeC=150;
+				timeout[]={20,20,20};
+				interuptable=1;
+				repeatable=1;
+				activationBy="ANYPLAYER";
+				isRectangle=1;
+			};
+			id=6966;
+			type="EmptyDetector";
+			atlOffset=4.9321442;
+		};
+		class Item5499
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8186.5,79.397964,24959.051};
+						angles[]={0.11942901,4.6696706,0.12599647};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+					};
+					id=6968;
+					type="B_UAV_AI";
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=6968;
+						item1=6969;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=6967;
+		};
+		class Item5500
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8186.1304,81.849571,24959.354};
+				angles[]={0.11942901,4.6696706,0.12599647};
+			};
+			side="West";
+			flags=6;
+			class Attributes
+			{
+				lock="LOCKED";
+				init="[this] call A3W_fnc_setupMissionObject";
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+			};
+			id=6969;
+			type="B_AAA_System_01_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=3;
+			nextID=4;
 		};
 		class Links
 		{
-			items=3;
+			items=4;
 			class Item0
 			{
 				linkID=0;
@@ -107529,6 +107856,16 @@ class Mission
 			{
 				linkID=2;
 				item0=6729;
+				item1=6717;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item3
+			{
+				linkID=3;
+				item0=6969;
 				item1=6717;
 				class CustomData
 				{

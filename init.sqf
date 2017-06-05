@@ -100,6 +100,7 @@ if (hasInterface || isServer) then
 	[] execVM "addons\outlw_magrepack\MagRepack_init.sqf";
 	[] execVM "addons\lsd_nvg\init.sqf";
 	[] execVM "addons\stickyCharges\init.sqf";
+	[] execVM "VCOM_Driving\init.sqf";                      //VCOM Driving for AI
 	[] execVM "addons\APOC_Airdrop_Assistance\init.sqf";  // Airdrop
 	[] execVM "addons\ToxicGasGrenades\ToxicGas.sqf"; //Toxic Gas Grenades (Hand)
 	[] execVM "addons\ToxicGasGrenades\ToxicGasGL.sqf"; //Toxic Gas Grenades (launcher)

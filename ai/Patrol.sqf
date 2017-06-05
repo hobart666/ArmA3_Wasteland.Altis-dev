@@ -1,0 +1,8 @@
+if (!isServer) exitwith {}; //Without this line, it will run this script for every player on the server (ten players means that ten of these patrols will spawn).
+_marker=_this select 0; //Set up a variable to use in your trigger.
+_IndiGroup= [getmarkerpos _marker, resistance, ["I_Soldier_TL_F","I_Soldier_F","I_Soldier_F","I_Soldier_AR_F"],[],[],[],[],[],180] call BIS_fnc_spawnGroup; //getmarkerpos _marker is the location where this patrol will spawn, resistance is the independent faction, you can replace it with East or West to spawn groups belonging to those factions, IDK what all the brackets do, but it doesn't work without them. 180 is the direction that the group is facing when they spawn, mostly irrelevant.
+[_IndiGroup, getmarkerpos _marker, 1000] call BIS_fnc_taskPatrol; //_IndiGroup refers to the group that you just created above. _marker is the position from which they will base their patrol. 1000 is the distance from that point that they will patrol. Can change any of these values and experiment.
+//Now, in your trigger on Act: put _script=["M1"] execVM "Patrol.sqf";
+//What this does is gives your _marker variable that you created in your patrol.sqf the variable to use.
+//If you want multiple markers, each spawning a patrol, then just copy/paste that trigger/marker combo, then change the name of the marker and the name of the marker variable in the trigger's on act field.
+//You can also spawn multiple groups from the same marker if you are interested in that. PM me for more. While I was working this out, I discovered tons of great stuff. Spawning convoys, quick reaction forces, close air support, etc., all from that same basic template.

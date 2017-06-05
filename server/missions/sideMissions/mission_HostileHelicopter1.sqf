@@ -21,11 +21,11 @@ _setupObjects =
 
 	_vehicleClass = if (missionDifficultyHard) then
 	{
-		selectRandom ["B_Heli_Attack_01_dynamicLoadout_F", "O_Heli_Attack_02_dynamicLoadout_F"] ;
+		selectRandom ["O_Heli_Attack_02_dynamicLoadout_F", "O_Heli_Attack_02_dynamicLoadout_F"] ;
 	}
 	else
 	{
-		selectRandom [["B_Heli_Light_01_dynamicLoadout_F", "pawneeNormal"], ["O_Heli_Light_02_dynamicLoadout_F", "orcaDAGR"], "I_Heli_light_03_dynamicLoadout_F"];
+		selectRandom [["O_Heli_Attack_02_dynamicLoadout_F", "orcaDAGR"], ["O_Heli_Light_02_dynamicLoadout_F", "orcaDAGR"], "O_Heli_Light_02_dynamicLoadout_F"];
 	};
 
 	_createVehicle =

@@ -14,7 +14,7 @@ if (!isServer) exitWith {};
 
 private ["_soldierTypes","_uniformTypes","_vestTypes","_backpackTypes","_weaponTypes","_group","_position","_soldier"];
 
-_soldierTypes = ["C_man_polo_1_F","C_man_polo_2_F","C_man_polo_3_F","C_man_polo_4_F","C_man_polo_5_F"];
+_soldierTypes = ["O_Pilot_F","O_crew_F","O_Soldier_lite_F","O_Soldier_F","O_officer_F"];
 _uniformTypes = ["U_B_HeliPilotCoveralls"];
 _vestTypes = ["V_PlateCarrier1_rgr","V_PlateCarrier2_rgr"];
 _backpackTypes = ["B_Parachute"];

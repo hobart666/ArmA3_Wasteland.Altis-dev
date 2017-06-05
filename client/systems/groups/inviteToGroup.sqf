@@ -10,7 +10,7 @@ if(player != leader group player) exitWith {player globalChat format["you are no
 
 #define groupManagementDialog 55510
 #define groupManagementPlayerList 55511
-#define MAX_GROUP_COUNT 4
+#define MAX_GROUP_COUNT 6
 
 disableSerialization;
 
@@ -42,7 +42,6 @@ if (_groupCount < MAX_GROUP_COUNT) then
 };
 
 if (_groupCount >= MAX_GROUP_COUNT) exitWith { [format ["You cannot have more than %1 group members, including pending invites.", MAX_GROUP_COUNT]] spawn BIS_fnc_guiMessage };
-
 //Checks
 if(isNil "_target") exitWith {player globalChat "you must select someone to invite first"};
 if(_target == player) exitWith {player globalChat "you can't invite yourself"};
