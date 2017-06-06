@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=84;
+		nextID=90;
 	};
 	class Camera
 	{
@@ -88177,17 +88177,17 @@ class Mission
 		class Item4551
 		{
 			dataType="Marker";
-			position[]={6192,0,6286};
+			position[]={6193,0,6287};
 			name="TERRITORY_CARRIER";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
 			fillName="BDiagonal";
-			a=180;
+			a=160;
 			b=42;
-			angle=36.212994;
+			angle=36.212997;
 			id=5797;
-			atlOffset=154.75066;
+			atlOffset=154.72798;
 		};
 		class Item4552
 		{
@@ -107500,7 +107500,7 @@ class Mission
 			position[]={9272.5,0,13841};
 			name="wp6";
 			type="Empty";
-			angle=229.15666;
+			angle=229.15665;
 			id=6947;
 			atlOffset=-29.09059;
 		};
@@ -107536,7 +107536,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={6222.5,-1.5258789e-005,6272};
-			angle=0.64652216;
+			angle=0.6465221;
 			class Attributes
 			{
 				onActivation="_group = []execVM ""ai\carrier.sqf"";";
@@ -107607,7 +107607,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={6272.5,-0.00042724609,6235};
-			angle=0.64652216;
+			angle=0.6465221;
 			class Attributes
 			{
 				onActivation="_group = []execVM ""ai\carrier.sqf""; _group = []execVM ""ai\isis3.sqf"";";
@@ -107628,7 +107628,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={6321.5,-0.00039672852,6198.5};
-			angle=0.64652216;
+			angle=0.6465221;
 			class Attributes
 			{
 				onActivation="_group = []execVM ""ai\isis3.sqf"";";
@@ -107649,7 +107649,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={6174,-0.00032043457,6308.5};
-			angle=0.64652216;
+			angle=0.6465221;
 			class Attributes
 			{
 				onActivation="_group = []execVM ""ai\carrier.sqf"";";
@@ -107670,7 +107670,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={6126,0,6345.5};
-			angle=0.64652216;
+			angle=0.6465221;
 			class Attributes
 			{
 				onActivation="_group = []execVM ""ai\carrier.sqf""; _group = []execVM ""ai\isis3.sqf"";";
@@ -107691,7 +107691,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={6077.5,-0.00035095215,6381.5};
-			angle=0.64652216;
+			angle=0.6465221;
 			class Attributes
 			{
 				onActivation="_group = []execVM ""ai\carrier.sqf""; _group = []execVM ""ai\isis3.sqf"";";
@@ -107778,6 +107778,7 @@ class Mission
 				};
 			};
 			id=6967;
+			atlOffset=-0.0012969971;
 		};
 		class Item5500
 		{
@@ -107798,6 +107799,7 @@ class Mission
 			};
 			id=6969;
 			type="B_AAA_System_01_F";
+			atlOffset=-0.0012969971;
 			class CustomAttributes
 			{
 				class Attribute0

@@ -35,12 +35,12 @@ _wp5 = _group addWaypoint [getMarkerPos "wp5", 0];*/
 
 //Sets the behaviour and speed of the units to "SAFE" and "LIMITED" and the waypointType to "MOVE"
 {
-   _x setWaypointBehaviour "COMBAT"; 
-_x setWaypointSpeed "NORMAL";
-_x setWaypointType "SAD";
-_x setWaypointBehaviour "COMBAT"; 
-_x setWaypointSpeed "LIMITED";
-_x setWaypointType "SAD";
+	_x setWaypointBehaviour "COMBAT"; 
+	_x setWaypointSpeed "NORMAL";
+	_x setWaypointType "SAD";
+	_x setWaypointBehaviour "COMBAT"; 
+	_x setWaypointSpeed "LIMITED";
+	_x setWaypointType "SAD";
 //_x setWaypointLoiterType "CIRCLE_L";
 
 } forEach [_Ca2,_Ca3];
