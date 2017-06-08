@@ -8,22 +8,22 @@ class EditorData
 	toggles=6;
 	class ItemIDProvider
 	{
-		nextID=6970;
+		nextID=6997;
 	};
 	class MarkerIDProvider
 	{
-		nextID=205;
+		nextID=206;
 	};
 	class LayerIndexProvider
 	{
-		nextID=90;
+		nextID=96;
 	};
 	class Camera
 	{
-		pos[]={8177.7202,95.906013,24990.143};
-		dir[]={0.37916061,-0.30685839,-0.8729853};
-		up[]={0.12224569,0.95174927,-0.28146183};
-		aside[]={-0.91723424,-9.8152668e-008,-0.39837924};
+		pos[]={6020.499,185.33081,6207.1113};
+		dir[]={0.58677447,-0.64728779,0.48659763};
+		up[]={0.49824128,0.76225239,0.41317868};
+		aside[]={0.63835841,9.3504786e-007,-0.76977974};
 	};
 };
 binarizationWanted=0;
@@ -232,7 +232,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=5501;
+		items=5504;
 		class Item0
 		{
 			dataType="Group";
@@ -88185,7 +88185,7 @@ class Mission
 			fillName="BDiagonal";
 			a=160;
 			b=42;
-			angle=36.212997;
+			angle=36.21299;
 			id=5797;
 			atlOffset=154.72798;
 		};
@@ -107500,7 +107500,7 @@ class Mission
 			position[]={9272.5,0,13841};
 			name="wp6";
 			type="Empty";
-			angle=229.15665;
+			angle=229.15649;
 			id=6947;
 			atlOffset=-29.09059;
 		};
@@ -107535,14 +107535,15 @@ class Mission
 		class Item5487
 		{
 			dataType="Trigger";
-			position[]={6222.5,-1.5258789e-005,6272};
+			position[]={6215.5,-315.5,6276.5};
 			angle=0.6465221;
 			class Attributes
 			{
-				onActivation="_group = []execVM ""ai\carrier.sqf"";";
+				condition="";
+				onActivation="_group = []execVM ""ai\carrier.sqf""; _group = []execVM ""ai\isis3.sqf"";";
 				sizeA=30;
 				sizeB=62;
-				sizeC=150;
+				sizeC=600;
 				timeout[]={30,50,60};
 				interuptable=1;
 				repeatable=1;
@@ -107551,7 +107552,7 @@ class Mission
 			};
 			id=6950;
 			type="EmptyDetector";
-			atlOffset=155.68201;
+			atlOffset=-159.47798;
 		};
 		class Item5488
 		{
@@ -107606,14 +107607,15 @@ class Mission
 		class Item5493
 		{
 			dataType="Trigger";
-			position[]={6272.5,-0.00042724609,6235};
+			position[]={6268.5,-308.50009,6240};
 			angle=0.6465221;
 			class Attributes
 			{
+				condition="";
 				onActivation="_group = []execVM ""ai\carrier.sqf""; _group = []execVM ""ai\isis3.sqf"";";
 				sizeA=30;
 				sizeB=62;
-				sizeC=150;
+				sizeC=600;
 				timeout[]={20,20,20};
 				interuptable=1;
 				repeatable=1;
@@ -107622,19 +107624,19 @@ class Mission
 			};
 			id=6961;
 			type="EmptyDetector";
-			atlOffset=151.69299;
+			atlOffset=-156.606;
 		};
 		class Item5494
 		{
 			dataType="Trigger";
-			position[]={6321.5,-0.00039672852,6198.5};
-			angle=0.6465221;
+			position[]={6328.5,-315.50006,6189};
+			angle=0.64652216;
 			class Attributes
 			{
-				onActivation="_group = []execVM ""ai\isis3.sqf"";";
+				onActivation="_group = []execVM ""ai\isis3.sqf""; _group = []execVM ""ai\isis3.sqf"";";
 				sizeA=30;
 				sizeB=62;
-				sizeC=150;
+				sizeC=600;
 				timeout[]={60,60,60};
 				interuptable=1;
 				repeatable=1;
@@ -107643,19 +107645,20 @@ class Mission
 			};
 			id=6962;
 			type="EmptyDetector";
-			atlOffset=143.71899;
+			atlOffset=-173.45801;
 		};
 		class Item5495
 		{
 			dataType="Trigger";
-			position[]={6174,-0.00032043457,6308.5};
+			position[]={6163.5,-319,6310.5};
 			angle=0.6465221;
 			class Attributes
 			{
-				onActivation="_group = []execVM ""ai\carrier.sqf"";";
+				condition="";
+				onActivation="_group = []execVM ""ai\carrier.sqf""; _group = []execVM ""ai\isis3.sqf"";";
 				sizeA=30;
 				sizeB=62;
-				sizeC=150;
+				sizeC=600;
 				timeout[]={90,90,90};
 				interuptable=1;
 				repeatable=1;
@@ -107664,19 +107667,20 @@ class Mission
 			};
 			id=6963;
 			type="EmptyDetector";
-			atlOffset=156.407;
+			atlOffset=-162.04602;
 		};
 		class Item5496
 		{
 			dataType="Trigger";
-			position[]={6126,0,6345.5};
+			position[]={6111.5,-327.99969,6341};
 			angle=0.6465221;
 			class Attributes
 			{
+				condition="";
 				onActivation="_group = []execVM ""ai\carrier.sqf""; _group = []execVM ""ai\isis3.sqf"";";
 				sizeA=30;
 				sizeB=62;
-				sizeC=150;
+				sizeC=600;
 				timeout[]={90,90,90};
 				interuptable=1;
 				repeatable=1;
@@ -107685,19 +107689,19 @@ class Mission
 			};
 			id=6964;
 			type="EmptyDetector";
-			atlOffset=159.908;
+			atlOffset=-167.77101;
 		};
 		class Item5497
 		{
 			dataType="Trigger";
-			position[]={6077.5,-0.00035095215,6381.5};
-			angle=0.6465221;
+			position[]={6066.5,-338.50006,6382.5};
+			angle=0.64652216;
 			class Attributes
 			{
 				onActivation="_group = []execVM ""ai\carrier.sqf""; _group = []execVM ""ai\isis3.sqf"";";
 				sizeA=30;
 				sizeB=62;
-				sizeC=150;
+				sizeC=600;
 				timeout[]={90,90,90};
 				interuptable=1;
 				repeatable=1;
@@ -107706,7 +107710,7 @@ class Mission
 			};
 			id=6965;
 			type="EmptyDetector";
-			atlOffset=159.207;
+			atlOffset=-179.78799;
 		};
 		class Item5498
 		{
@@ -107823,6 +107827,43 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item5501
+		{
+			dataType="Marker";
+			position[]={6029.5972,0,6378.356};
+			name="d1";
+			type="Empty";
+			id=6991;
+			atlOffset=164.15297;
+		};
+		class Item5502
+		{
+			dataType="Marker";
+			position[]={6364.0962,0,6169.2681};
+			name="d2";
+			type="Empty";
+			id=6992;
+			atlOffset=137.74329;
+		};
+		class Item5503
+		{
+			dataType="Trigger";
+			position[]={6198.5,0.0002746582,6282.5};
+			angle=0.62807405;
+			class Attributes
+			{
+				condition="({(getPosASL _x select 2) < -1} count thisList > 0) && THIS;";
+				onActivation="_group = []execVM ""ai\isis4.sqf""; _group = []execVM ""ai\isis5.sqf"";";
+				sizeA=220;
+				sizeB=60;
+				repeatable=1;
+				activationBy="ANYPLAYER";
+				isRectangle=1;
+			};
+			id=6994;
+			type="EmptyDetector";
+			atlOffset=154.83499;
 		};
 	};
 	class Connections

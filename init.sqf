@@ -110,23 +110,14 @@ if (hasInterface || isServer) then
 	[] execVM "addons\scripts\HvD.sqf";                   // High Value DrugRunner
 	[] execVM "addons\scripts\logo.sqf";                  // CNT Logo
 	[] execVM "addons\scripts\intro.sqf";						// Welcome intro added comment for test
-	if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
+	//if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
 	
-	[] execVM "addons\scripts\fn_advancedSlingLoadingInit.sqf";  //Advanced Sling Loading
-	//[] execVM "addons\scripts\fn_advancedTowingInit.sqf";  //Advanced Towing	
-	//SA_TOW_LOCKED_VEHICLES_ENABLED = true;	
 	
 	
 };
 
 //get rid of the animals
 enableEnvironment [false, true];
-
-	ASL_LOCKED_VEHICLES_ENABLED = true;
-	ASL_HEAVY_LIFTING_MIN_LIFT_OVERRIDE = 0;
-	ASL_SLING_RULES_OVERRIDE = [
-      ["All","CAN_SLING","All"]
-];
 
 // Remove line drawings from map
 (createTrigger ["EmptyDetector", [0,0,0], false]) setTriggerStatements
