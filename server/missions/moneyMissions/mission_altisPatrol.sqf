@@ -7,21 +7,18 @@
 if (!isServer) exitwith {};
 #include "moneyMissionDefines.sqf";
 
-private ["_convoyVeh","_veh1","_veh2","_veh3","_veh4","_veh5","_createVehicle","_pos","_rad","_vehicles","_leader","_speedMode","_waypoint","_vehicleName","_numWaypoints","_cash","_drugpilerandomizer","_drugpile","_box1","_box2","_box3"];
+private ["_convoyVeh","_veh1","_veh2","_veh3","_veh4","_veh5","_createVehicle","_pos","_rad","_vehiclePosArray","_vPos1","_vPos2","_vPos3","_vehiclePos1","_vehiclePos2","_vehiclePos3","_vehiclePos4","_vehicles","_leader","_speedMode","_waypoint","_vehicleName","_numWaypoints","_cash","_drugpilerandomizer","_drugpile","_box1","_box2","_box3"];
 
 _setupVars =
 {
 	_missionType = "Altis Patrol";
-	_locationsArray = LandConvoyPaths;
-	//_locationsArray = nil;
+	_locationsArray = nil;
 };
 
 _setupObjects =
 {
-	//_town = (call cityList) call BIS_fnc_selectRandom;
-	//_missionPos = markerPos (_town select 0);
-	private ["_starts", "_startDirs", "_waypoints"];
-	call compile preprocessFileLineNumbers format ["mapConfig\convoys\%1.sqf", _missionLocation];
+	_town = (call cityList) call BIS_fnc_selectRandom;
+	_missionPos = markerPos (_town select 0);
 
 	_convoyVeh = ["I_MRAP_03_hmg_F","I_MBT_03_cannon_F","O_APC_Tracked_02_AA_F","I_MBT_03_cannon_F","I_MRAP_03_gmg_F"];
 	
@@ -59,18 +56,18 @@ _setupObjects =
 		_vehicle
 	};
 
-	_aiGroup = createGroup CIVILIAN;
+	_aiGroup = createGroup EAST;
 	
 	//_pos = getMarkerPos (_town select 0);
-	//_rad = _town select 1;
-	//_vehiclePosArray = [_missionPos,_rad,_rad + 50,5,0,0,0] call findSafePos;
+	_rad = _town select 1;
+	_vehiclePosArray = [_missionPos,_rad,_rad + 50,5,0,0,0] call findSafePos;
 	/*_vPos1 = _vehiclePosArray select 0;
 	_vPos2 = _vehiclePosArray select 1;
 	_vPos3 = _vehiclePosArray select 2;
 	_vehiclePos1 = [_vPos1 + 5, _vPos2 + 5, _vPos3];
 	_vehiclePos2 = [_vPos1 + 10, _vPos2 + 10, _vPos3];
 	_vehiclePos3 = [_vPos1 + 15, _vPos2 + 15, _vPos3];
-	_vehiclePos4 = [_vPos1 + 20, _vPos2 + 20, _vPos3];
+	_vehiclePos4 = [_vPos1 + 20, _vPos2 + 20, _vPos3];*/
 
 	_vehicles =
 	[
@@ -79,7 +76,7 @@ _setupObjects =
 		[_veh3, _vehiclePosArray, 0] call _createVehicle,
 		[_veh4, _vehiclePosArray, 0] call _createVehicle,
 		[_veh5, _vehiclePosArray, 0] call _createVehicle
-	];*/
+	];
 
 	_leader = effectiveCommander (_vehicles select 0);
 	_aiGroup selectLeader _leader;
@@ -89,7 +86,7 @@ _setupObjects =
 	_aiGroup setBehaviour "SAFE"; // units feel safe until they spot an enemy or get into contact
 	_aiGroup setFormation "FILE";
 
-	_speedMode = if (missionDifficultyHard) then { "LIMITED" } else { "LIMITED" };
+	_speedMode = if (missionDifficultyHard) then { "NORMAL" } else { "LIMITED" };
 	_aiGroup setSpeedMode _speedMode;
 
 	{

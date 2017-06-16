@@ -166,6 +166,7 @@ if(hasInterface) then{[] execVM "addons\statusBar\statusBar.sqf"};
 
 call compile preprocessFileLineNumbers "client\functions\generateAtmArray.sqf";
 [] execVM "client\functions\drawPlayerMarkers.sqf";
+[] execVM "addons\bases\donatorCheck.sqf";		// Donator base failsafe
 
 inGameUISetEventHandler ["Action", "_this call A3W_fnc_inGameUIActionEvent"];
 

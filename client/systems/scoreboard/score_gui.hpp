@@ -49,7 +49,8 @@ class ScoreGUI : IGUIBack
 		class PListTopBG : IGUIBack
 		{
 			idc = -1;
-			colorBackground[] = {A3W_UICOLOR_R, A3W_UICOLOR_G, A3W_UICOLOR_B, 0.8};
+			colorBackground[] = {0.546,0.59,0.363,0.4};
+			//colorBackground[] = {A3W_UICOLOR_R, A3W_UICOLOR_G, A3W_UICOLOR_B, 0.8};
 
 			#define PListTopBG_H (0.05 * Y_SCALE)
 
@@ -379,7 +380,8 @@ class ScoreGUI : IGUIBack
 		class TListBG : IGUIBack
 		{
 			idc = -1;
-			colorBackground[] = {0, 0, 0, 0.3};
+			colorBackground[] = {0.546,0.59,0.363,0.4};
+			//colorBackground[] = {0, 0, 0, 0.3};
 
 			#define TListBG_W ((0.825 * X_SCALE) - (Score_EXT_MARGIN_X / 2))
 			#define TListBG_X (0.5 - (TListBG_W / 2)) //(TListBG_W + (Score_EXT_MARGIN_X / 2))) // center left + margin

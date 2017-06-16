@@ -5,7 +5,7 @@ _group = [[6363,6168,-3], West, ["B_diver_exp_F", "B_diver_exp_F"],[],[],[],[],[
 
 _units = (units _group);
 
-/*_d1 = _group addWaypoint [getMarkerPos "d1", 25];
+_d1 = _group addWaypoint [getMarkerPos "d1", 25];
 
 _d2 = _group addWaypoint [getMarkerPos "d2", 25];
 
@@ -17,7 +17,7 @@ _d2 = _group addWaypoint [getMarkerPos "d2", 25];
 	_x setWaypointSpeed "NORMAL";
 	_x setWaypointType "MOVE";
 
-} forEach [_d1,_d2];*/
+} forEach [_d1,_d2];
 
 {
 	_x allowFleeing 0;
@@ -26,11 +26,12 @@ _d2 = _group addWaypoint [getMarkerPos "d2", 25];
 	_x setSkill ["aimingspeed", 1];
 	_x setSkill ["spotdistance", 1];
 	_x setSkill ["aimingaccuracy", 1];
-	_x setSkill ["aimingshake", 0];
+	_x setSkill ["aimingshake", 1];
 	_x setSkill ["spottime", 1];
 	_x setSkill ["spotdistance", 1];
 	_x setSkill ["commanding", 1];
 	_x setSkill ["general", 1];
 	_x addItem "ItemRadio";
-	//_x addEventHandler ["Killed", server_playerDied];
+	_x swimInDepth -5;
+	_x addEventHandler ["Killed", server_playerDied];
 } forEach units _group;

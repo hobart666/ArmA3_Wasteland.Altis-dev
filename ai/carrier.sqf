@@ -41,7 +41,7 @@ _wp5 = _group addWaypoint [getMarkerPos "wp5", 0];*/
 	_x setWaypointBehaviour "COMBAT"; 
 	_x setWaypointSpeed "LIMITED";
 	_x setWaypointType "SAD";
-//_x setWaypointLoiterType "CIRCLE_L";
+    _x setWaypointLoiterType "CIRCLE_L";
 
 } forEach [_Ca2,_Ca3];
 
@@ -57,5 +57,5 @@ _wp5 = _group addWaypoint [getMarkerPos "wp5", 0];*/
 	_x setSkill ["commanding", 1];
 	_x setSkill ["general", 1];
 	_x addItem "ItemRadio";
-	//_x addEventHandler ["Killed", server_playerDied];
+	_x addEventHandler ["Killed", server_playerDied];
 } forEach units _group;

@@ -7,7 +7,7 @@
 if (!isServer) exitwith {};
 #include "moneyMissionDefines.sqf";
 
-private ["_convoyVeh","_veh1","_veh2","_veh3","_veh4","_veh5","_veh6","_createVehicle1","_createVehicle2","_createVehicle3","_vehicles", "_leader", "_speedMode", "_waypoint", "_vehicleName", "_numWaypoints", "_cash", "_box1", "_box2", "_box3"];
+private ["_convoyVeh","_veh1","_veh2","_veh3","_veh4","_veh5","_veh6","_createVehicle","_pos","_rad","_vehicles","_leader","_speedMode","_waypoint","_vehicleName","_numWaypoints","_cash","_drugpilerandomizer","_drugpile","_box1","_box2","_box3"];
 
 _setupVars =
 {
@@ -23,8 +23,8 @@ _setupObjects =
 	// Pick the vehicles for the patrol. Only one set at the moment. Will add more later.
 	_convoyVeh = 
 	[	
-		["I_G_Offroad_01_F","O_MBT_02_cannon_F","I_MRAP_03_F","O_APC_Tracked_02_AA_F","I_MBT_03_cannon_F","I_G_Offroad_01_F"],
-		["I_G_Offroad_01_F","O_MBT_02_cannon_F","I_MRAP_03_F","O_APC_Tracked_02_AA_F","I_MBT_03_cannon_F","I_G_Offroad_01_F"]
+		["I_G_Offroad_01_F","O_MBT_02_cannon_F","I_MRAP_03_F","O_APC_Tracked_02_AA_F","I_MBT_03_cannon_F","I_G_Offroad_01_F"];
+		["I_G_Offroad_01_F","O_MBT_02_cannon_F","I_MRAP_03_F","O_APC_Tracked_02_AA_F","I_MBT_03_cannon_F","I_G_Offroad_01_F"];
 	] call BIS_fnc_selectRandom;
 	
 	_veh1 = _convoyVeh select 0;
@@ -34,35 +34,7 @@ _setupObjects =
 	_veh5 = _convoyVeh select 4;
 	_veh6 = _convoyVeh select 5;
 
-	_createVehicle1 = {
-		private ["_type","_position","_direction","_vehicle","_soldier"];
-		
-		_type = _this select 0;
-		_position = _this select 1;
-		_direction = _this select 2;
-
-		_vehicle = createVehicle [_type, _position, [], 0, "None"];
-		[_vehicle] call vehicleSetup;
-
-		_vehicle setDir _direction;
-		_aiGroup addVehicle _vehicle;
-		
-		_soldier = [_aiGroup, _position] call createRandomSoldier; 
-		_soldier moveInDriver _vehicle;
-		_soldier = [_aiGroup, _position] call createRandomSoldier; 
-		_soldier moveInCommander _vehicle;
-		_soldier = [_aiGroup, _position] call createRandomSoldier; 
-		_soldier moveInCargo [_vehicle, 0];
-
-		//_vehicle setVehicleLock "UNLOCKED";  // force vehicles to be unlocked
-		//_vehicle setVariable ["R3F_LOG_disabled", false, true]; // force vehicles to be unlocked
-		_vehicle setVariable ["R3F_LOG_disabled", true, true]; // force vehicles to be locked
-		[_vehicle, _aiGroup] spawn checkMissionVehicleLock; // force vehicles to be locked
-
-		_vehicle
-	};	
-	
-	_createVehicle2 = {
+	_createVehicle = {
 		private ["_type","_position","_direction","_vehicle","_soldier"];
 		
 		_type = _this select 0;
@@ -90,35 +62,9 @@ _setupObjects =
 		_vehicle
 	};
 
-		_createVehicle3 = {
-		private ["_type","_position","_direction","_vehicle","_soldier"];
-		
-		_type = _this select 0;
-		_position = _this select 1;
-		_direction = _this select 2;
-
-		_vehicle = createVehicle [_type, _position, [], 0, "None"];
-		[_vehicle] call vehicleSetup;
-
-		_vehicle setDir _direction;
-		_aiGroup addVehicle _vehicle;
-		
-		_soldier = [_aiGroup, _position] call createRandomSoldier; 
-		_soldier moveInDriver _vehicle;
-		_soldier = [_aiGroup, _position] call createRandomSoldier; 
-		_soldier moveInCargo [_vehicle, 0];
-
-		//_vehicle setVehicleLock "UNLOCKED";  // force vehicles to be unlocked
-		//_vehicle setVariable ["R3F_LOG_disabled", false, true]; // force vehicles to be unlocked
-		_vehicle setVariable ["R3F_LOG_disabled", true, true]; // force vehicles to be locked
-		[_vehicle, _aiGroup] spawn checkMissionVehicleLock; // force vehicles to be locked
-
-		_vehicle
-	};
-
 	_aiGroup = createGroup EAST;
 	
-	_vehicles =
+	/* _vehicles =
 	[
 		[_veh1, _starts select 0, _startDirs select 0] call _createVehicle3,
 		[_veh2, _starts select 1, _startDirs select 1] call _createVehicle2,
@@ -126,7 +72,7 @@ _setupObjects =
 		[_veh4, _starts select 3, _startDirs select 3] call _createVehicle2,
 		[_veh5, _starts select 4, _startDirs select 4] call _createVehicle2,
 		[_veh6, _starts select 5, _startDirs select 5] call _createVehicle3
-	];
+	]; */
 
 	_leader = effectiveCommander (_vehicles select 0);
 	_aiGroup selectLeader _leader;
@@ -168,18 +114,51 @@ _waitUntilCondition = {currentWaypoint _aiGroup >= _numWaypoints};
 _failedExec = nil;
 
 // _vehicles are automatically deleted or unlocked in missionProcessor depending on the outcome
+_drop_item = 
+{
+	private["_item", "_pos"];
+	_item = _this select 0;
+	_pos = _this select 1;
+
+	if (isNil "_item" || {typeName _item != typeName [] || {count(_item) != 2}}) exitWith {};
+	if (isNil "_pos" || {typeName _pos != typeName [] || {count(_pos) != 3}}) exitWith {};
+
+	private["_id", "_class"];
+	_id = _item select 0;
+	_class = _item select 1;
+
+	private["_obj"];
+	_obj = createVehicle [_class, _pos, [], 5, "None"];
+	_obj setPos ([_pos, [[2 + random 3,0,0], random 360] call BIS_fnc_rotateVector2D] call BIS_fnc_vectorAdd);
+	_obj setVariable ["mf_item_id", _id, true];
+};
 
 _successExec =
 {
 	// Mission completed
 
-	for "_x" from 1 to 10 do
+	for "_x" from 1 to 5 do
 	{
 		_cash = "Land_Money_F" createVehicle markerPos _marker;
 		_cash setPos ((markerPos _marker) vectorAdd ([[2 + random 2,0,0], random 360] call BIS_fnc_rotateVector2D));
 		_cash setDir random 360;
 		_cash setVariable["cmoney",5000,true];
 		_cash setVariable["owner","world",true];
+	};
+	
+	_drugpilerandomizer = [8,12,16];
+	_drugpile = _drugpilerandomizer call BIS_fnc_SelectRandom;
+	
+	for "_i" from 1 to _drugpile do 
+	{
+	  private["_item"];
+	  _item = [
+	          ["lsd", "Land_WaterPurificationTablets_F"],
+	          ["marijuana", "Land_VitaminBottle_F"],
+	          ["cocaine","Land_PowderedMilk_F"],
+	          ["heroin", "Land_PainKillers_F"]
+	        ] call BIS_fnc_selectRandom;
+	  [_item, _lastPos] call _drop_item;
 	};
 
 	_box1 = "Box_East_Wps_F" createVehicle getMarkerPos _marker;
@@ -196,7 +175,7 @@ _successExec =
 	
 	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1, _box2, _box3];
 
-	_successHintMessage = "The patrol has been stopped, the money, crates and vehicles are yours to take.";
+	_successHintMessage = "The patrol has been stopped, the money, drugs, crates and vehicles are yours to take.";
 };
 
 _this call moneyMissionProcessor;

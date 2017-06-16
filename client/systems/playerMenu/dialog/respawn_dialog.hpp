@@ -36,7 +36,8 @@ class RespawnSelectionDialog
 		{
 			idc = -1;
 			colorText[] = {1, 1, 1, 1};
-			colorBackground[] = {A3W_UICOLOR_R, A3W_UICOLOR_G, A3W_UICOLOR_B, 0.8};
+			colorBackground[] = {0.596,0.69,0.553,0.4};
+			//colorBackground[] = {A3W_UICOLOR_R, A3W_UICOLOR_G, A3W_UICOLOR_B, 0.8};
 
 			// relative to RspnMainBG
 			#define RspnTopBar_W RspnMainBG_W // match RspnMainBG width

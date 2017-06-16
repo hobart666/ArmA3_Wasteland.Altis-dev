@@ -33,7 +33,8 @@ class PlayersMenu
 		{
 			idc = -1;
 			colorText[] = {1, 1, 1, 1};
-			colorBackground[] = {A3W_UICOLOR_R, A3W_UICOLOR_G, A3W_UICOLOR_B, 0.8};
+			colorBackground[] = {0.546,0.59,0.363,0.4};
+			//colorBackground[] = {A3W_UICOLOR_R, A3W_UICOLOR_G, A3W_UICOLOR_B, 0.8};
 
 			x = -0.225;
 			y = -0.16;

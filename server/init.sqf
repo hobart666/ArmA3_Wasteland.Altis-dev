@@ -95,6 +95,10 @@ if (isServer) then
 	{
 		[[call compile preprocessFileLineNumbers (externalConfigFolder + "\serverRules.sqf")], "client\functions\defineServerRules.sqf"] remoteExecCall ["execVM", [-2,0] select hasInterface, true];
 	};
+	
+	// Load Donators and NLU members
+	[] execVM (externalConfigFolder + "\donators.sqf");
+	[] execVM (externalConfigFolder + "\nlunited.sqf");
 };
 
 diag_log "WASTELAND SERVER - Server Compile Finished";

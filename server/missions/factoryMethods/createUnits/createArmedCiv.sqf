@@ -61,17 +61,17 @@ _civillian spawn refillPrimaryAmmo;
 
 
 //_civillian call setMissionSkill;						// not for mission :P
-_civillian setBehaviour "COMBAT";
-
-//_civillian setSkill ["aimingspeed", 1];
-//_civillian setSkill ["spotdistance", 1];
-//_civillian setSkill ["aimingaccuracy", 1];
-//_civillian setSkill ["aimingshake", 1];
-//_civillian setSkill ["spottime", 1];
-//_civillian setSkill ["spotdistance", 1];
-//_civillian setSkill ["commanding", 1];
-//_civillian setSkill ["general", 1];
 _civillian allowFleeing 0;
+//_civillian setBehaviour "COMBAT";
+//_civillian setCombatMode "RED";
+_civillian setSkill ["aimingspeed", 1];
+_civillian setSkill ["spotdistance", 1];
+_civillian setSkill ["aimingaccuracy", 1];
+_civillian setSkill ["aimingshake", 0.8];
+_civillian setSkill ["spottime", 1];
+_civillian setSkill ["spotdistance", 1];
+_civillian setSkill ["commanding", 1];
+_civillian setSkill ["general", 1];
 
 _civillian addEventHandler ["Killed", server_playerDied];
 

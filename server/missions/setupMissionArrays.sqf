@@ -45,10 +45,10 @@ SideMissions =
 
 MoneyMissions =
 [
-	["mission_MoneyShipment", 1],
+	["mission_MoneyShipment", 0.5],
 	["mission_SunkenTreasure", 1],
-	["mission_militaryPatrol", 1]
-//	["mission_altisPatrol", 1]
+//	["mission_militaryPatrol", 1]
+	["mission_altisPatrol", 1]
 ];
 
 MissionSpawnMarkers = (allMapMarkers select {["Mission_", _x] call fn_startsWith}) apply {[_x, false]};

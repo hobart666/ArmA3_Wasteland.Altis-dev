@@ -82,6 +82,7 @@ if (isNil "playerData_alive" || !isNil "playerData_resetPos") then
 	};
 };
 
+
 playerData_alive = nil;
 playerData_resetPos = nil;
 
