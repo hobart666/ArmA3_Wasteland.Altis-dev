@@ -119,6 +119,9 @@ if (hasInterface || isServer) then
 //get rid of the animals
 enableEnvironment [false, true];
 
+setViewDistance 12000;
+setObjectViewDistance 12000;
+
 // Remove line drawings from map
 (createTrigger ["EmptyDetector", [0,0,0], false]) setTriggerStatements
 [
