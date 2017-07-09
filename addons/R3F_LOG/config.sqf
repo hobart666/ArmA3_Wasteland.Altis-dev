@@ -420,6 +420,9 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 [
 	// e.g. : ["MyTransportableObjectClassName1", itsCost], ["MyTransportableObjectClassName2", itsCost]
+	["Land_Canal_Wall_10m_F", 10], // added for building
+	["Land_InfoStand_V2_F", 3], // Base door key
+	["Land_Device_assembled_F", 10], // Base locker
 	["Static_Designator_01_base_F", 2],
 	["Static_Designator_02_base_F", 2],
 	["StaticWeapon", 5],
@@ -440,7 +443,7 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 	["Land_BagFence_Round_F", 2],
 	["Land_BagFence_Short_F", 2],
 	["Land_BarGate_F", 3],
-	//["Land_Canal_WallSmall_10m_F", 4],
+	["Land_Canal_WallSmall_10m_F", 4],
 	//["Land_Canal_Wall_Stairs_F", 3],
 	["Land_CargoBox_V1_F", 5],
 	["Land_Cargo_Patrol_V1_F", 7],
@@ -505,6 +508,9 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 [
 	// e.g. : "MyMovableObjectClassName1", "MyMovableObjectClassName2"
+	"Land_Canal_Wall_10m_F", // Base door
+	"Land_InfoStand_V2_F", // Base door key
+	"Land_Device_assembled_F", //relocker
 	"StaticWeapon",
 	"ReammoBox_F",
 	"Kart_01_Base_F",
@@ -522,7 +528,7 @@ R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 	"Land_BagFence_Round_F",
 	"Land_BagFence_Short_F",
 	"Land_BarGate_F",
-	//"Land_Canal_WallSmall_10m_F",
+	"Land_Canal_WallSmall_10m_F",
 	//"Land_Canal_Wall_Stairs_F",
 	"Land_CargoBox_V1_F",
 	"Land_Cargo_Patrol_V1_F",

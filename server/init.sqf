@@ -170,7 +170,9 @@ if (isServer) then
 		"A3W_vehicleLocking",
 		"A3W_customDeathMessages",
 		"A3W_headshotNoRevive",
-		"A3W_supportersEnabled"
+		"A3W_supportersEnabled",
+		"BoS_coolDownTimer",
+		"Safe_coolDownTimer"
 	];
 
 	addMissionEventHandler ["PlayerConnected", fn_onPlayerConnected];

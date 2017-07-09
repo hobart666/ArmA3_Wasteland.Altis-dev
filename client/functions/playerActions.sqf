@@ -8,8 +8,8 @@
 
 { [player, _x] call fn_addManagedAction } forEach
 [
-	["Holster Weapon", { player action ["SwitchWeapon", player, player, 100] }, [], -11, false, false, "", "vehicle player == player && currentWeapon player != '' && (stance player != 'CROUCH' || currentWeapon player != handgunWeapon player)"], // A3 v1.58 bug, holstering handgun while crouched causes infinite anim loop
-	//["Unholster Primary Weapon", { player action ["SwitchWeapon", player, player, 0] }, [], -11, false, false, "", "vehicle player == player && currentWeapon player == '' && primaryWeapon player != ''"],
+	["<img image='client\icons\rifle.paa'/> Holster Weapon", { player action ["SwitchWeapon", player, player, 100] }, [], -90, false, false, "", "vehicle player == player && currentWeapon player != ''"],
+	//["<img image='client\icons\rifle.paa'/> Unholster Primary Weapon", { player action ["SwitchWeapon", player, player, 0] }, [], -90, false, false, "", "vehicle player == player && currentWeapon player == '' && primaryWeapon player != ''"],
 
 	[format ["<img image='client\icons\playerMenu.paa' color='%1'/> <t color='%1'>[</t>Player Menu<t color='%1'>]</t>", "#FF8000"], "client\systems\playerMenu\init.sqf", [], -10, false], //, false, "", ""],
 	
@@ -22,6 +22,12 @@
 	["<img image='client\icons\repair.paa'/> Salvage", "client\actions\salvage.sqf", [], 1.1, false, false, "", "!isNull cursorTarget && !alive cursorTarget && {cursorTarget isKindOf 'AllVehicles' && !(cursorTarget isKindOf 'Man') && player distance cursorTarget <= (sizeOf typeOf cursorTarget / 3) max 3}"],
 	
 	["<img image='client\icons\cancel.paa'/> Hide Body", "client\actions\hide.sqf", [], 1.1, false, false, "", "!isNull cursorTarget && !alive cursorTarget && {cursorTarget isKindOf 'AllVehicles' && (cursorTarget isKindOf 'Man') && player distance cursorTarget <= (sizeOf typeOf cursorTarget / 3) max 2}"],
+	
+	["<t color='#FFE496'><img image='client\icons\gunner.paa'/> Mark your stuff on the map</t>", "addons\scripts\markOwned.sqf", [], -95,false,false,"","{_x in ['ItemGPS','B_UavTerminal','O_UavTerminal','I_UavTerminal']} count assignedItems player > 0"],
+
+	["<t color='#FFE496'><img image='client\icons\keypad.paa'/> Open Base Menu</t>", "addons\BoS\BoS_selectMenu.sqf", [cursorTarget], -97, false, false, "", "cursortarget iskindof 'Land_Device_assembled_F' && {cursorTarget getVariable ['objectLocked', false]} && {vehicle player == player} && {!isNull cursorTarget} && {alive cursorTarget} && {(player distance cursortarget) < 5}"],
+	
+	["<t color='#FFE496'><img image='client\icons\take.paa'/> Hack Base</t>", "addons\BoS\BoS_hackBase.sqf", [cursorTarget], -97, false, false, "", "cursortarget iskindof 'Land_Device_assembled_F' && {cursorTarget getVariable ['objectLocked', false]} && {vehicle player == player} && {!isNull cursorTarget} && {alive cursorTarget} && {'ToolKit' in (items player)} && {cursorTarget getVariable ['ownerUID',''] != getPlayerUID player} && {(player distance cursortarget) < 5}"],
 
 	// If you have a custom vehicle licence system, simply remove/comment the following action
 	["<img image='client\icons\r3f_unlock.paa'/> Acquire Vehicle Ownership", "client\actions\takeOwnership.sqf", [], 1, false, false, "", "[] call fn_canTakeOwnership isEqualTo ''"],
