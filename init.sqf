@@ -94,13 +94,12 @@ if (hasInterface || isServer) then
 	[] execVM "addons\parking\functions.sqf";
 	[] execVM "addons\storage\functions.sqf";
 	[] execVM "addons\vactions\functions.sqf";
-	[] execVM "addons\R3F_ARTY_AND_LOG\init.sqf";
+	[] execVM "addons\R3F_LOG\init.sqf";
 	[] execVM "addons\proving_ground\init.sqf";
 	[] execVM "addons\JumpMF\init.sqf";
 	[] execVM "addons\outlw_magrepack\MagRepack_init.sqf";
 	[] execVM "addons\lsd_nvg\init.sqf";
 	[] execVM "addons\stickyCharges\init.sqf";
-	[] execVM "VCOM_Driving\init.sqf";                      //VCOM Driving for AI
 	[] execVM "addons\APOC_Airdrop_Assistance\init.sqf";  // Airdrop
 	[] execVM "addons\ToxicGasGrenades\ToxicGas.sqf"; //Toxic Gas Grenades (Hand)
 	[] execVM "addons\ToxicGasGrenades\ToxicGasGL.sqf"; //Toxic Gas Grenades (launcher)
@@ -108,6 +107,7 @@ if (hasInterface || isServer) then
     [] execVM "fusionsmenu\admin\activate.sqf";					// Fusions adminmenu
 	[] execVM "addons\scripts\HvT.sqf";                   // High Value Target
 	[] execVM "addons\scripts\HvD.sqf";                   // High Value DrugRunner
+	[] execVM "addons\scripts\repetitive_cleanup.sqf";     // new cleanup test
 	[] execVM "addons\scripts\logo.sqf";                  // CNT Logo
 	[] execVM "addons\scripts\intro.sqf";						// Welcome intro added comment for test
 	//if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };

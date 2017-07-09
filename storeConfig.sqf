@@ -847,6 +847,10 @@ genObjectsArray = compileFinal str
 
 	//CCG stuff
 	//["Cargo Tower Green", "Land_Cargo_Tower_V4_F", 11000, "object"],
+	["Small Bunker", "Land_Bunker_01_small_F", 40000, "object"],
+	["Bunker HQ", "Land_Bunker_01_HQ_F", 50000, "object"],
+	["Tall Bunker", "Land_Bunker_01_tall_F", 55000, "object"],
+	["Large Bunker", "Land_Bunker_01_big_F", 75000, "object"],
 	["Pillbox Small", "Land_PillboxBunker_01_hex_F", 6000, "object"],
 	["Pillbox rectangle", "Land_PillboxBunker_01_rectangle_F", 7000, "object"],
 	["Pillbox Large", "Land_PillboxBunker_01_big_F", 10000, "object"],

@@ -36,3 +36,5 @@ _g2 = _group addWaypoint [getMarkerPos "g2", 25];
 	_x addItem "ItemRadio";
 	_x addEventHandler ["Killed", server_playerDied];
 } forEach units _group;
+
+_group call defendArea;

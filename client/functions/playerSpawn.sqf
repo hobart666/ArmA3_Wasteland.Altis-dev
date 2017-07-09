@@ -68,7 +68,7 @@ if (isNil "playerData_alive" || !isNil "playerData_resetPos") then
 	9999 cutText ["Loading...", "BLACK", 0.01];
 // supporters load here
 
-    _this call vaforall;
+//    _this call vaforall;
 
 	true spawn client_respawnDialog;
 
@@ -80,6 +80,7 @@ if (isNil "playerData_alive" || !isNil "playerData_resetPos") then
 	{
 		[] spawn fn_savePlayerData;
 	};
+	_this call vaforall;
 };
 
 
