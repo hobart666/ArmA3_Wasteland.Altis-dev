@@ -718,9 +718,9 @@ backpackArray = compileFinal str
 
 genItemArray = compileFinal str
 [
-	["UAV Terminal (NATO)", "B_UavTerminal", 150, "gps"],
-	["UAV Terminal (CSAT)", "O_UavTerminal", 150, "gps"],
-	["UAV Terminal (AAF)", "I_UavTerminal", 150, "gps"],
+	//["UAV Terminal (NATO)", "B_UavTerminal", 150, "gps"],
+	//["UAV Terminal (CSAT)", "O_UavTerminal", 150, "gps"],
+	//["UAV Terminal (AAF)", "I_UavTerminal", 150, "gps"],
 	["Quadrotor UAV (NATO)", "B_UAV_01_backpack_F", 1000, "backpack"],
 	["Quadrotor UAV (CSAT)", "O_UAV_01_backpack_F", 1000, "backpack"],
 	["Quadrotor UAV (AAF)", "I_UAV_01_backpack_F", 1000, "backpack"],
@@ -740,7 +740,7 @@ genItemArray = compileFinal str
 	["Compact NVG (G Hex)", "O_NVGoggles_ghex_F", 150, "nvg"],
 	["Compact NVG (Urban)", "O_NVGoggles_urb_F", 150, "nvg"],
 	["Binoculars", "Binocular", 50, "binoc"],
-	["Rangefinder", "Rangefinder", 150, "binoc"],
+	//["Rangefinder", "Rangefinder", 150, "binoc"],
 	//["Laser Designator (Sand)", "Laserdesignator", 250, "binoc", "noDLC"], // Increase price to 2500 if A3W_disableBuiltInThermal = 0
 	//["Laser Designator (Hex)", "Laserdesignator_02", 300, "binoc", "noDLC"],
 	//["Laser Designator (Olive)", "Laserdesignator_03", 250, "binoc", "noDLC"],
@@ -807,15 +807,16 @@ genObjectsArray = compileFinal str
 	["Ammo Cache", "Box_FIA_Support_F", 250, "ammocrate"],
 	["Base door", "Land_Canal_WallSmall_10m_F", 1000, "object"],  // LouD
 	["Base door key (PIN IS EMPTY)", "Land_InfoStand_V2_F", 500, "object"],  // LouD
-	["Base locker (PIN IS EMPTY)", "Land_Device_assembled_F", 400, "object"],  //Cael817, SNAFU,Used for base operations <-- Destroyable
+	["Base locker", "Land_Device_assembled_F", 400, "object"],  //Cael817, SNAFU,Used for base operations <-- Destroyable
 	["Safe (PIN IS EMPTY)", "Box_NATO_AmmoVeh_F", 250000, "ammocrate"],
 	//["Metal Barrel", "Land_MetalBarrel_F", 25, "object"],
 	//["Toilet Box", "Land_ToiletBox_F", 25, "object"],
 	["Lamp Post (Harbour)", "Land_LampHarbour_F", 100, "object"],
 	["Lamp Post (Shabby)", "Land_LampShabby_F", 100, "object"],
 	["Boom Gate", "Land_BarGate_F", 150, "object"],
+	["Ghost Hotel Stairs", "Land_GH_Stairs_F", 1000, "object"],
 	//["Pipes", "Land_Pipes_Large_F", 200, "object"],
-	//["Concrete Frame", "Land_CncShelter_F", 200, "object"],
+	["Concrete Frame", "Land_CncShelter_F", 200, "object"],
 	//["Highway Guardrail", "Land_Crash_barrier_F", 200, "object"],
 	//["Concrete Barrier", "Land_CncBarrier_F", 200, "object"],
 	//["Concrete Barrier (Medium)", "Land_CncBarrierMedium_F", 350, "object"],
@@ -844,6 +845,7 @@ genObjectsArray = compileFinal str
 	["Bag Bunker Tower", "Land_BagBunker_Tower_F", 1000, "object"],
 	["Military Cargo Post", "Land_Cargo_Patrol_V1_F", 800, "object"],
 	//["Military Cargo Tower", "Land_Cargo_Tower_V1_F", 10000, "object"],
+	["Concrete Block", "BlockConcrete_F", 5000, "object"],
 	["Concrete Ramp", "Land_RampConcrete_F", 350, "object"],
 	["Concrete Ramp (High)", "Land_RampConcreteHigh_F", 1600, "object"],
 	//["Scaffolding", "Land_Scaffolding_F", 1500, "object"],

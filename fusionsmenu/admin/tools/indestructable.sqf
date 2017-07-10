@@ -1,0 +1,1 @@
+cursorTarget allowDamage false;

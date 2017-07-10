@@ -304,7 +304,7 @@ R3F_LOG_CFG_can_tow = R3F_LOG_CFG_can_tow +
 R3F_LOG_CFG_can_lift = R3F_LOG_CFG_can_lift +
 [
 	// e.g. : "MyLifterVehicleClassName1", "MyLifterVehicleClassName2"
-	//"Helicopter_Base_F"
+	"Helicopter_Base_F"
 ];
 
 /**
@@ -372,42 +372,42 @@ R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 [
 	// e.g. : ["MyTransporterClassName1", itsCapacity], ["MyTransporterClassName2", itsCapacity]
-	["Quadbike_01_base_F", 5],
+	["Quadbike_01_base_F", 10],
 	["UGV_01_base_F", 10],
 	["Hatchback_01_base_F", 10],
-	["SUV_01_base_F", 20],
+	["SUV_01_base_F", 50],
 	["Offroad_01_base_F", 30],
-	["Offroad_02_base_F", 20],
+	["Offroad_02_base_F", 50],
 	["Van_01_base_F", 40],
 	["LSV_01_base_F", 15],
 	["LSV_02_base_F", 15],
-	["MRAP_01_base_F", 20],
-	["MRAP_02_base_F", 20],
-	["MRAP_03_base_F", 20],
+	["MRAP_01_base_F", 50],
+	["MRAP_02_base_F", 50],
+	["MRAP_03_base_F", 50],
 	["B_Truck_01_box_F", 150],
 	["Truck_F", 75],
-	["Wheeled_APC_F", 30],
-	["Tank_F", 30],
-	["Scooter_Transport_01_base_F", 5],
+	["Wheeled_APC_F", 75],
+	["Tank_F", 75],
+	["Scooter_Transport_01_base_F", 10],
 	["Rubber_duck_base_F", 10],
-	["Boat_Civil_01_base_F", 10],
-	["Boat_Transport_02_base_F", 15],
-	["Boat_Armed_01_base_F", 20],
-	["Heli_Light_01_base_F", 10],
-	["Heli_Light_02_base_F", 20],
-	["Heli_light_03_base_F", 20],
-	["Heli_Transport_01_base_F", 25],
-	["Heli_Transport_02_base_F", 30],
-	["Heli_Transport_03_base_F", 30],
-	["Heli_Transport_04_base_F", 30],
-	["Heli_Attack_01_base_F", 10],
-	["Heli_Attack_02_base_F", 20],
-	["Plane_Civil_01_base_F", 5],
-	["VTOL_01_base_F", 50],
-	["VTOL_02_base_F", 54],
+	["Boat_Civil_01_base_F", 20],
+	["Boat_Transport_02_base_F", 30],
+	["Boat_Armed_01_base_F", 50],
+	["Heli_Light_01_base_F", 20],
+	["Heli_Light_02_base_F", 50],
+	["Heli_light_03_base_F", 50],
+	["Heli_Transport_01_base_F", 75],
+	["Heli_Transport_02_base_F", 75],
+	["Heli_Transport_03_base_F", 75],
+	["Heli_Transport_04_base_F", 75],
+	["Heli_Attack_01_base_F", 50],
+	["Heli_Attack_02_base_F", 50],
+	["Plane_Civil_01_base_F", 50],
+	["VTOL_01_base_F", 150],
+	["VTOL_02_base_F", 150],
 
 	//CCG addition as per players request
-	["SDV_01_base_F", 6]
+	["SDV_01_base_F", 50]
 ];
 
 /**
@@ -469,6 +469,7 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 	["Land_Mil_WallBig_4m_F", 5],
 	["Land_Obstacle_Ramp_F", 5],
 	["Land_Pipes_large_F", 5],
+	["BlockConcrete_F", 15],
 	["Land_RampConcreteHigh_F", 6],
 	["Land_RampConcrete_F", 5],
 	["Land_Razorwire_F", 5],
@@ -481,14 +482,15 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 
 	//CCG Stuff
 	//["Land_Cargo_Tower_V4_F", 21],
+	["Land_GH_Stairs_F", 2],
 	["Land_Bunker_01_big_F", 30],
     ["Land_Bunker_01_HQ_F", 45],
     ["Land_Bunker_01_small_F", 25],
     ["Land_Bunker_01_tall_F", 40],
-	["Land_PillboxBunker_01_hex_F", 12],
+	["Land_PillboxBunker_01_hex_F", 21],
 	["Land_PillboxBunker_01_rectangle_F", 21],
 	["Land_PillboxBunker_01_big_F", 30],
-	["Land_PillboxWall_01_6m_round_F", 9],
+	["Land_PillboxWall_01_6m_round_F", 15],
 	["Land_Shoot_House_Panels_F", 2],
 	["Land_Slum_House02_F", 15],
 	["Land_Cargo_HQ_V2_F", 25],
@@ -554,6 +556,7 @@ R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 	"Land_Mil_WallBig_4m_F",
 	"Land_Obstacle_Ramp_F",
 	"Land_Pipes_large_F",
+	"BlockConcrete_F",
 	"Land_RampConcreteHigh_F",
 	"Land_RampConcrete_F",
 	"Land_Razorwire_F",
@@ -566,6 +569,7 @@ R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 	
 	//CCG
 	//"Land_Cargo_Tower_V4_F",
+	"Land_GH_Stairs_F",
 	"Land_Bunker_01_big_F",
     "Land_Bunker_01_HQ_F",
     "Land_Bunker_01_small_F",

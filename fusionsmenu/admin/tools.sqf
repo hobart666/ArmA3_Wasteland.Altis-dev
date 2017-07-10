@@ -37,7 +37,7 @@ ToolsMenu =
         ["Autoheal", [5],  "", -5, [["expression", format[_EXECscript1,"autoheal.sqf"]]], "1", "1"],
 		["Heal Other Player", [6],  "", -5, [["expression", format[_EXECscript1,"healp.sqf"]]], "1", "1"],
 		["Car God Mode", [7],  "", -5, [["expression", format[_EXECscript1,"cargod.sqf"]]], "1", "1"],
-		//["Look And Repair", [8],  "", -5, [["expression", format[_EXECscript1,"looknrepair.sqf"]]], "1", "1"],
+		["Indestructable", [8],  "", -5, [["expression", format[_EXECscript1,"indestructable.sqf"]]], "1", "1"],
 		["Repair Buildings", [9],  "", -5, [["expression", format[_EXECscript1,"fixbuildings.sqf"]]], "1", "1"],
 		["Check Player Inv", [10],  "", -5, [["expression", format[_EXECscript1,"dayzesp.sqf"]]], "1", "1"],
 		//["", [-1], "", -5, [["expression", ""]], "1", "0"],
