@@ -805,9 +805,9 @@ genObjectsArray = compileFinal str
 [
 	["Pier Ladder", "Land_PierLadder_F", 250, "object"],
 	["Ammo Cache", "Box_FIA_Support_F", 250, "ammocrate"],
-	["Base door (beta)", "Land_Canal_WallSmall_10m_F", 1000, "object"],  // LouD
-	["Base door key (beta)", "Land_InfoStand_V2_F", 500, "object"],  // LouD
-	["Base locker", "Land_Device_assembled_F", 400, "object"],  //Cael817, SNAFU,Used for base operations <-- Destroyable
+	["Base door", "Land_Canal_WallSmall_10m_F", 1000, "object"],  // LouD
+	["Base door key (PIN IS EMPTY)", "Land_InfoStand_V2_F", 500, "object"],  // LouD
+	["Base locker (PIN IS EMPTY)", "Land_Device_assembled_F", 400, "object"],  //Cael817, SNAFU,Used for base operations <-- Destroyable
 	["Safe (PIN IS EMPTY)", "Box_NATO_AmmoVeh_F", 250000, "ammocrate"],
 	//["Metal Barrel", "Land_MetalBarrel_F", 25, "object"],
 	//["Toilet Box", "Land_ToiletBox_F", 25, "object"],

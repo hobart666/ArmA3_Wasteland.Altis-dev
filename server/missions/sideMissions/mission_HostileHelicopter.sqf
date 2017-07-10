@@ -38,7 +38,7 @@ _setupObjects =
 
 	_veh1 = _convoyVeh select 0;
 	_veh2 = _convoyVeh select 1;
-	_veh3 = _convoyVeh select 1;
+	_veh3 = _convoyVeh select 2;
 
 	_createVehicle =
 	{
@@ -132,7 +132,7 @@ _setupObjects =
 	_vehicleName = getText (configFile >> "CfgVehicles" >> _veh1 >> "displayName");
 	_vehicleName2 = getText (configFile >> "CfgVehicles" >> _veh2 >> "displayName");
 
-	_missionHintText = format ["A formation of armed Gunships <t color='%3'>%1</t> and two <t color='%3'>%2</t> are patrolling the islands. Destroy them and recover their cargo!", _vehicleName, _vehicleName2, mainMissionColor];
+	_missionHintText = format ["A formation of armed Gunships <t color='%3'>%1</t> and two <t color='%3'>%2</t> are patrolling the islands. Destroy them and recover their cargo!", _vehicleName, _vehicleName2, sideMissionColor];
 
 	_numWaypoints = count waypoints _aiGroup;
 };
