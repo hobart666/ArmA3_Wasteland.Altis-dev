@@ -15,10 +15,10 @@ if (!isNil "_uid") then {
 	_BoS_select = _displayBoS displayCtrl BoS_Menu_option;
 
 	_panelOptions = [
-					"Re Lock base objects",
+					"Refresh Baselock",
 					"Show objects owned by you",
 					"Show Base Border",
-					"Repair Re-Locker"
+					"Repair Locker"
 	];
 
 	{

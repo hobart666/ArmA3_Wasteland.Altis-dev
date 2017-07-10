@@ -11,6 +11,8 @@
 _object = cursorTarget;
 
 OutputText = nil;
+InputText = "";
+ClearText = "Enter Keycode";
 
 createDialog "AF_Keypad";
 

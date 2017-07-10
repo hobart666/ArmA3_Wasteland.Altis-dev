@@ -3,7 +3,7 @@
 //	@file Author: Cael817 based on objectSearchinteraction.sqf from A3W
 //	@file Created: 20150129 17:02
 
-#define RADIUS 30
+#define RADIUS 1000
 _maxLifetime = ["A3W_objectLifetime", 168] call getPublicVar;
 _objects = nearestObjects [position player, ["Landvehicle", "Ship", "Air", "Building", "ReammoBox_F", "thingX"], 1000];
 

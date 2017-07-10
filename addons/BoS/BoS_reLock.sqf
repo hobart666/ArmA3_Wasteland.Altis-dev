@@ -1,29 +1,34 @@
 //	@file Version:
 //	@file Name:
-//	@file Author: Cael817 based on objectSearchinteraction.sqf from A3W
+//	@file Author: Cael817, modded by Wiking[AJ]
 //	@file Created:
 
 private ["_price", "_playerMoney"];
 
-#define RADIUS 30
-_maxLifetime = ["A3W_objectLifetime", 0] call getPublicVar;
+#define RADIUS 100
+#define RELOCK_PRICE_RELATIONSHIP 10
+
+_maxLifetime = ["A3W_objectLifetime", 120] call getPublicVar;
 _objects = nearestObjects [position player, ["thingX", "Building", "ReammoBox_F"], RADIUS];
 _ownedObjects = {typeName _x == "OBJECT" && {!(isNil {_x getVariable "ownerUID"})} && {_x getVariable "objectLocked"}} count _objects;
 //_ownedObjects = {typeName _x == "OBJECT" && {_x getVariable ["ownerUID",""] == getPlayerUID player}} count _objects; // Use this if you want only owned objects to be relocked.
 
-_playerMoney = player getVariable "cmoney";
-_price = _ownedObjects * 100;
-_playerMoney = player getVariable "cmoney";
-
-
-/*
-if (isNIL "_relockedTime") exitWith
+_price = 100;
 {
-	_confirmMsg = format ["Normally this action would lock all objects within %1 radius but something went wrong or the Re Locker was already used this session, please try again later / next restart.", RADIUS];
-	// Display confirm message
-	if ([parseText _confirmMsg, "Information", "OK", false] call BIS_fnc_guiMessage) then
-	{};
-};*/
+_objClass = typeOf _x;
+
+
+	{
+		if (_objClass == _x select 1) exitWith
+		{
+			_price = _price + ((ceil (((_x select 2) / RELOCK_PRICE_RELATIONSHIP) / 5)) * 5);
+		};
+	} forEach (call allGenStoreVanillaItems);
+} forEach _objects;
+
+
+_playerMoney = player getVariable "cmoney";
+
 
 if (isNil "reLockedObjectMapMarkers") then {
 	// This is the global we use to keep track of map markers
@@ -41,7 +46,7 @@ if (count reLockedObjectMapMarkers > 0) then {
 if (!isNil "_price") then 
 {
 	// Add total sell value to confirm message
-	_confirmMsg = format ["Re locking %1 baseparts/objects will cost you $%2<br/>Range is %3 meters, all relocked objects will be marked on map<br/>Objects will not load in after next restart if older than %4 hours.", _ownedObjects, _price, RADIUS, _maxLifetime];
+	_confirmMsg = format ["Renew lifteime of %1 baseparts/objects will cost you $%2<br/>Range is %3 meters, all renewed objects will be marked on map<br/>If not renewed objects expire after %4 hours.", _ownedObjects, _price, RADIUS, _maxLifetime];
 
 	// Display confirm message
 	if ([parseText _confirmMsg, "Confirm", "OK", true] call BIS_fnc_guiMessage) then
@@ -50,7 +55,7 @@ if (!isNil "_price") then
 
 		if (_price > _playerMoney) exitWith
 		{
-			hint format ["You need $%1 to Re Lock %2 objects",  _price, _ownedObjects];
+			hint format ["You need $%1 to renew %2 objects",  _price, _ownedObjects];
 			playSound "FD_CP_Not_Clear_F";
 		};
 		
@@ -62,11 +67,11 @@ if (!isNil "_price") then
 		if !(isNil {_x getVariable "ownerUID"}) then // Changed so also non owned objects are relocked
 		{
 		private ["_name","_objPos","_name","_marker"];
-		_x setVariable ["baseSaving_hoursAlive", nil, true];
+		_x setVariable ["baseSaving_hoursAlive", nil, true]; //this is only for local persistance mode - extb isn't using it
 		_x setVariable ["baseSaving_spawningTime", nil, true];
 		_x setVariable ["objectLocked",true,true];
 		pvar_manualObjectSave = netId _x;
-		publicVariableServer "pvar_manualObjectSave";
+		publicVariableServer "pvar_manualObjectSave";   //this resets the lock timer for extdb persistance
 		//trackObject = _x;
 		//publicVariableServer "trackObject";
 		//_x setVariable ["ownerUID", getPlayerUID player, true]; //possibly set new owner?
@@ -87,7 +92,7 @@ if (!isNil "_price") then
 
 if (count reLockedObjectMapMarkers > 0) then {
 
-	["Added Markers for the locked objects, they will be removed in 30 seconds", 5] call mf_notify_client;
+	["Added Markers for the renewed objects, they will be removed in 30 seconds", 5] call mf_notify_client;
 	
 	}else{
 	//["No owned objects found within the set radius", 5] call mf_notify_client;
