@@ -63,4 +63,5 @@ class APOC_srv_startAirdrop { allowedTargets = 2; };
 class JTS_FNC_SENT {};
 class ASL_HEAVY_LIFTING_MIN_LIFT_OVERRIDE {};
 class ASL_SLING_RULES_OVERRIDE {};
+class kill_fnc_killfeedcompile {};
 

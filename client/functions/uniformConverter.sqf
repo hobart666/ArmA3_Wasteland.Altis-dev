@@ -60,9 +60,10 @@ if !(_unit isUniformAllowed _uniform) then
 				_uniX = _x;
 
 				if (_unit isUniformAllowed _uniX || // indie exception for NATO jungle ghillie & thermal suit due to BIS not giving a damn
-				    (side group _unit == INDEPENDENT && {{_uniX == _x} count ["U_B_CTRG_Soldier_F","U_B_T_FullGhillie_tna_F"] > 0})) exitWith
+				    (side group _unit == INDEPENDENT && {{_uniX == _x} count ["U_B_CTRG_Soldier_F","U_B_T_FullGhillie_tna_F","U_O_V_Soldier_Viper_hex_F","U_O_V_Soldier_Viper_F"] > 0})) exitWith
 				{
 					_uniform = _uniX;
+					systemChat format ["_uniform: %1", _uniX];
 				};
 			} forEach _uniArray;
 		};

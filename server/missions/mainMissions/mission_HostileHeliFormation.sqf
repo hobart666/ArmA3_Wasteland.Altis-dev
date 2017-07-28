@@ -106,7 +106,7 @@ _setupObjects =
 		_vehicle
 	};
 
-	_aiGroup = createGroup EAST;
+	_aiGroup = createGroup CIVILIAN;
 
 	_vehicles =
 	[

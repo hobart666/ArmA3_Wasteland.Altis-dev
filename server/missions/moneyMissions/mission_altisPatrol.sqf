@@ -56,7 +56,7 @@ _setupObjects =
 		_vehicle
 	};
 
-	_aiGroup = createGroup EAST;
+	_aiGroup = createGroup CIVILIAN;
 	
 	//_pos = getMarkerPos (_town select 0);
 	_rad = _town select 1;

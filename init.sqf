@@ -110,7 +110,6 @@ if (hasInterface || isServer) then
 	[] execVM "addons\scripts\HvD.sqf";                   // High Value DrugRunner
 	[] execVM "addons\scripts\repetitive_cleanup.sqf";     // new cleanup test
 	[] execVM "addons\scripts\logo.sqf";                  // CNT Logo
-	[] execVM "killfeed\killfeed.sqf";                   //Killfeed
 	[] execVM "addons\scripts\intro.sqf";						// Welcome intro added comment for test
 	//if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
 	

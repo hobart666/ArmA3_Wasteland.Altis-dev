@@ -84,7 +84,6 @@ class RscTitles
 	#include "client\systems\playerMenu\dialog\welcome.hpp"
 	#include "client\systems\scoreboard\score_gui.hpp"
 	#include "addons\statusBar\statusBar.hpp"
-	#include "killfeed\dialogs\titles.hpp"
 	//#include "addons\far_revive\revive_gui.hpp"
 };
 
@@ -97,18 +96,6 @@ class CfgFunctions
 	};
 
 	#include "addons\CHVD\CfgFunctions.hpp"
-	#include "killfeed\dialogs\common.hpp"
-	
-	class killfeed {
-		tag = "kill";
-		class functions {
-			file = "killfeed\functions";
-			class killfeedMain {};
-			class killfeedCompile {};
-			class killfeedType {};
-			class killfeedRender {};
-		};
-	};
 };
 
 class CfgNotifications
