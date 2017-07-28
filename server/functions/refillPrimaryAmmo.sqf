@@ -7,56 +7,35 @@
 //	@file Created: 21/10/2013 19:30
 //	@file Args:
 
-#define MIN_MAGS 3
-#define ROCKET_TIMEOUT 60 // seconds
-
 if (!isServer) exitWith {};
 
-params ["_unit"];
+private ["_unit", "_minMags", "_magType", "_magCount"];
 
-if (!local _unit || isPlayer _unit) exitWith {};
 
-private _magType1 = "";
-private _magType2 = "";
-private ["_magCount", "_magTimeout2"];
+_unit = _this;
+_minMags = 3;
 
-while {alive _unit} do
+if (local _unit && !isPlayer _unit) then
 {
-	if (_magType1 == "") then
+	waitUntil
 	{
-		_magType1 = (primaryWeaponMagazine _unit) param [0,"",[""]];
-	}
-	else
-	{
-		_magCount = {_x == _magType1} count magazines _unit;
-
-		if (_magCount < MIN_MAGS) then
-		{
-			_unit addMagazines [_magType1, MIN_MAGS - _magCount];
-		};
+		sleep 1;
+		_magType = (primaryWeaponMagazine _unit) param [0, "", [""]];
+		_magType != "" || !alive _unit
 	};
 
-	if (_magType2 == "") then
+	if (_magType != "") then
 	{
-		_magType2 = (secondaryWeaponMagazine _unit) param [0,"",[""]];
-	}
-	else
-	{
-		_magCount = {_x == _magType2} count magazines _unit;
-
-		if (_magCount == 0) then
+		while {alive _unit} do
 		{
-			if (isNil "_magTimeout2") then
+			_magCount = {_x == _magType} count magazines _unit;
+
+			if (_magCount < _minMags) then
 			{
-				_magTimeout2 = diag_tickTime;
+				_unit addMagazines [_magType, _minMags - _magCount];
 			};
 
-			if (!isNil "_magTimeout2" && {diag_tickTime - _magTimeout2 >= ROCKET_TIMEOUT}) then
-			{
-				_unit addMagazines [_magType2, MIN_MAGS];
-			};
+			sleep 3;
 		};
 	};
-
-	sleep 3;
 };
